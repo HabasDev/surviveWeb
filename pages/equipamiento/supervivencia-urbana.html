@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supervivencia urbana | KIT72h</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { survival: { 300: '#a9ef61', 500: '#6fbe24' } }, boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' } } } }
+  </script>
+  <style>
+    body { background: radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem), linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%); }
+    .glass { background: rgba(12, 17, 12, .76); border: 1px solid rgba(255,255,255,.09); backdrop-filter: blur(18px); }
+  </style>
+</head>
+<body class="min-h-screen text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="../../index.html" class="text-xl font-black tracking-tight">KIT<span class="text-survival-300">72h</span></a>
+      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+        <a class="hover:text-white" href="../../index.html">Inicio</a>
+        <a class="text-white" href="index.html">Equipamiento</a>
+        <a class="hover:text-white" href="supervivencia-casa.html">Casa</a>
+        <a class="hover:text-white" href="seguridad-privada.html">Seguridad privada</a>
+      </div>
+      <a href="index.html" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-bold text-white/80 hover:bg-white/10">Volver</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="border-b border-white/10 bg-[url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center">
+      <div class="bg-black/72 px-5 py-20">
+        <div class="mx-auto max-w-7xl">
+          <p class="text-xs font-black uppercase tracking-[.25em] text-survival-300">Ciudad y movilidad</p>
+          <h1 class="mt-4 max-w-4xl text-5xl font-black leading-[.96] md:text-7xl">Supervivencia urbana</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">Preparacion discreta para cortes de luz, transporte bloqueado, evacuaciones, esperas largas o volver a casa con seguridad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl gap-5 px-5 py-16 lg:grid-cols-3">
+      <article class="glass rounded-[1.5rem] p-6">
+        <p class="text-sm font-black text-survival-300">01 · Mochila diaria</p>
+        <h2 class="mt-2 text-2xl font-black">Ligero y discreto</h2>
+        <ul class="mt-5 space-y-3 text-white/70">
+          <li>Botella de agua reutilizable</li>
+          <li>Powerbank pequeno y cable corto</li>
+          <li>Linterna compacta</li>
+          <li>Mini botiquin y medicacion personal</li>
+          <li>Mascarilla, gel y panuelos</li>
+          <li>Efectivo, tarjeta secundaria y copia de llaves</li>
+        </ul>
+      </article>
+      <article class="glass rounded-[1.5rem] p-6">
+        <p class="text-sm font-black text-survival-300">02 · Vuelta a casa</p>
+        <h2 class="mt-2 text-2xl font-black">Moverte con margen</h2>
+        <ul class="mt-5 space-y-3 text-white/70">
+          <li>Calzado comodo o calcetines de repuesto</li>
+          <li>Mapa offline y puntos de encuentro</li>
+          <li>Chubasquero compacto</li>
+          <li>Barrita energetica o comida simple</li>
+          <li>Silbato de emergencia</li>
+          <li>Lista impresa de contactos importantes</li>
+        </ul>
+      </article>
+      <article class="glass rounded-[1.5rem] p-6">
+        <p class="text-sm font-black text-survival-300">03 · Casa/vehiculo</p>
+        <h2 class="mt-2 text-2xl font-black">Reserva urbana</h2>
+        <ul class="mt-5 space-y-3 text-white/70">
+          <li>Kit de agua y comida para 24h</li>
+          <li>Manta termica y guantes</li>
+          <li>Cargador de coche o adaptador</li>
+          <li>Documentos digitalizados y protegidos</li>
+          <li>Bolsa estanca pequena</li>
+          <li>Notas con rutas alternativas</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
+

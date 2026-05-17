@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KIT72h | Generador de kits de emergencia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            survival: {
+              50: '#f4ffe8',
+              100: '#e3ffc3',
+              300: '#a9ef61',
+              500: '#6fbe24',
+              600: '#559a17',
+              900: '#15220e'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 35px rgba(111, 190, 36, 0.22)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem),
+        linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%);
+    }
+    .hero-bg {
+      background:
+        linear-gradient(90deg, rgba(5,8,5,.96) 0%, rgba(5,8,5,.82) 43%, rgba(5,8,5,.35) 100%),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .glass {
+      background: rgba(12, 17, 12, .76);
+      border: 1px solid rgba(255,255,255,.09);
+      backdrop-filter: blur(18px);
+    }
+    .kit-card-bg {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.82)),
+        url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-survival-500/40 bg-survival-500/15 text-survival-300">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" stroke="currentColor" stroke-width="2"/><path d="M12 7v10M8 9.5l4-2.3 4 2.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <p class="text-xl font-black tracking-tight">KIT<span class="text-survival-400">72h</span></p>
+          <p class="-mt-1 text-[11px] text-white/50">Prepárate. Protege a los tuyos.</p>
+        </div>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+        <a class="hover:text-white" href="pages/generador.html">Generador</a>
+        <a class="hover:text-white" href="pages/equipamiento/index.html">Equipamiento</a>
+        <a class="hover:text-white" href="#newsletter">Recursos</a>
+      </div>
+
+      <div id="guestActions" class="flex items-center gap-2">
+        <button id="openLogin" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-bold text-white/80 transition hover:bg-white/10" type="button">Entrar</button>
+        <button id="openRegister" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300" type="button">Crear cuenta</button>
+      </div>
+
+      <div id="userActions" class="hidden items-center gap-3">
+        <span id="userGreeting" class="hidden text-sm font-bold text-white/70 sm:inline"></span>
+        <button id="logoutBtn" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-bold text-white/80 transition hover:bg-white/10" type="button">Salir</button>
+      </div>
+    </nav>
+  </header>
+
+  <div id="authModal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-black/80 px-5 py-8 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="glass relative w-full max-w-md rounded-[2rem] p-6 shadow-2xl">
+      <button id="closeAuth" class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xl text-white/60 transition hover:bg-white/10 hover:text-white" type="button" aria-label="Cerrar">&times;</button>
+
+      <div class="mb-6 pr-10">
+        <p class="text-xs font-black uppercase tracking-[.24em] text-survival-400">Tu cuenta KIT72h</p>
+        <h2 id="authTitle" class="mt-2 text-3xl font-black tracking-tight">Accede a tus kits</h2>
+        <p class="mt-2 text-sm leading-6 text-white/60">Crea una cuenta local para guardar el acceso en este MVP. El backend real se puede conectar despues.</p>
+      </div>
+
+      <div class="mb-5 grid grid-cols-2 rounded-xl border border-white/10 bg-black/35 p-1">
+        <button id="loginTab" class="rounded-lg bg-survival-500 px-4 py-2 text-sm font-black text-black" type="button">Login</button>
+        <button id="registerTab" class="rounded-lg px-4 py-2 text-sm font-black text-white/65 transition hover:text-white" type="button">Registro</button>
+      </div>
+
+      <p id="authMessage" class="mb-4 hidden rounded-xl border px-4 py-3 text-sm font-bold"></p>
+
+      <form id="loginForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-bold text-white/80" for="loginEmail">Correo electronico</label>
+          <input id="loginEmail" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="email" autocomplete="email" required />
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-white/80" for="loginPassword">Contrasena</label>
+          <input id="loginPassword" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="password" autocomplete="current-password" minlength="8" required />
+        </div>
+        <button class="w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Iniciar sesion</button>
+      </form>
+
+      <form id="registerForm" class="hidden space-y-4">
+        <div>
+          <label class="block text-sm font-bold text-white/80" for="registerName">Nombre</label>
+          <input id="registerName" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="text" autocomplete="name" minlength="2" required />
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-white/80" for="registerEmail">Correo electronico</label>
+          <input id="registerEmail" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="email" autocomplete="email" required />
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-white/80" for="registerPassword">Contrasena</label>
+          <input id="registerPassword" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="password" autocomplete="new-password" minlength="8" required />
+        </div>
+        <button class="w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Crear cuenta</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero-bg border-b border-white/10">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-[1.05fr_.95fr] md:py-28">
+        <div class="flex flex-col justify-center">
+          <p class="mb-4 text-xs font-black uppercase tracking-[.25em] text-survival-400">Prepárate para lo impredecible</p>
+          <h1 class="max-w-2xl text-5xl font-black leading-[.95] tracking-tight md:text-7xl">Crea tu kit de emergencia personalizado</h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-white/70">Responde unas preguntas rápidas y recibe una lista clara con lo que necesitas para sobrevivir 72 horas con cabeza, presupuesto y sin comprar trastos inútiles.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="pages/generador.html" class="rounded-xl bg-survival-500 px-6 py-4 text-center font-black text-black shadow-glow transition hover:bg-survival-300">Generar mi kit gratis →</a>
+            <a href="pages/equipamiento/index.html" class="rounded-xl border border-white/20 px-6 py-4 text-center font-bold text-white transition hover:bg-white/10">Ver equipamiento</a>
+          </div>
+          <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/60">
+            <span class="flex items-center gap-2"><b class="text-survival-400">✓</b> Rápido</span>
+            <span class="flex items-center gap-2"><b class="text-survival-400">✓</b> Personalizado</span>
+            <span class="flex items-center gap-2"><b class="text-survival-400">✓</b> Descargable</span>
+            <span class="flex items-center gap-2"><b class="text-survival-400">✓</b> Privado</span>
+          </div>
+        </div>
+
+        <div class="hidden items-end justify-center md:flex">
+          <div class="glass w-full max-w-md rounded-[2rem] p-5 shadow-2xl">
+            <div class="kit-card-bg h-80 rounded-[1.5rem] border border-white/10 p-5">
+              <div class="flex h-full flex-col justify-between">
+                <div class="w-fit rounded-full bg-black/50 px-4 py-2 text-sm font-bold text-survival-300">Kit base 72h</div>
+                <div>
+                  <p class="text-3xl font-black">Mochila preparada</p>
+                  <p class="mt-2 text-sm text-white/65">Agua · luz · radio · botiquín · comida · calor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative z-10 mx-auto -mt-10 max-w-7xl px-5">
+      <div class="grid gap-4 rounded-3xl bg-white p-5 text-slate-950 shadow-2xl md:grid-cols-4 md:p-8">
+        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
+          <p class="mb-3 text-3xl">🛡️</p>
+          <h3 class="font-black">Protege a los tuyos</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Prepara lo importante antes de que haga falta.</p>
+        </article>
+        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
+          <p class="mb-3 text-3xl">📋</p>
+          <h3 class="font-black">Planifica sin líos</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Una lista adaptada a personas, mascotas y ubicación.</p>
+        </article>
+        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
+          <p class="mb-3 text-3xl">💸</p>
+          <h3 class="font-black">Ahorra dinero</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Prioriza compras útiles y evita duplicados absurdos.</p>
+        </article>
+        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
+          <p class="mb-3 text-3xl">🔒</p>
+          <h3 class="font-black">Privacidad primero</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">El cálculo funciona en local en este primer MVP.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="generador" class="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-[.85fr_1.15fr]">
+      <div class="flex flex-col justify-center">
+        <p class="mb-3 text-xs font-black uppercase tracking-[.24em] text-survival-400">Herramienta principal</p>
+        <h2 class="text-4xl font-black tracking-tight md:text-5xl">Generador de kits inteligente</h2>
+        <p class="mt-5 max-w-lg text-white/65 leading-8">Este MVP calcula una recomendación básica según personas, mascotas, zona y presupuesto. La idea potente viene después: IA real, enlaces de compra, PDF y comparativas.</p>
+        <ul class="mt-7 space-y-3 text-white/75">
+          <li>✅ 100% personalizado</li>
+          <li>✅ Según hogar, familia y ubicación</li>
+          <li>✅ Adaptado a presupuesto</li>
+          <li>✅ Preparado para monetización por afiliados</li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-[2rem] p-5 shadow-2xl md:p-7">
+        <div class="grid gap-5 lg:grid-cols-[1fr_.85fr]">
+          <form id="kitForm" class="rounded-[1.5rem] border border-white/10 bg-black/30 p-5">
+            <div class="mb-6 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-bold text-survival-400">Paso 1 de 3</p>
+                <h3 class="text-2xl font-black">Tu situación</h3>
+              </div>
+              <span class="rounded-full bg-survival-500 px-3 py-1 text-xs font-black text-black">72h</span>
+            </div>
+
+            <label class="block text-sm font-bold text-white/80" for="people">¿Cuántas personas viven en tu hogar?</label>
+            <select id="people" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
+              <option value="1">1 persona</option>
+              <option value="2" selected>2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 o más</option>
+            </select>
+
+            <label class="mt-5 block text-sm font-bold text-white/80" for="pets">¿Tienes mascotas?</label>
+            <select id="pets" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
+              <option value="no" selected>No</option>
+              <option value="yes">Sí</option>
+            </select>
+
+            <label class="mt-5 block text-sm font-bold text-white/80" for="zone">¿Dónde vives?</label>
+            <select id="zone" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
+              <option value="city">Ciudad</option>
+              <option value="town">Pueblo</option>
+              <option value="rural">Zona rural</option>
+              <option value="coast">Costa</option>
+            </select>
+
+            <label class="mt-5 block text-sm font-bold text-white/80" for="budget">Presupuesto aproximado</label>
+            <select id="budget" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
+              <option value="basic">Básico: 50-100 €</option>
+              <option value="medium" selected>Medio: 100-200 €</option>
+              <option value="pro">Completo: 200-400 €</option>
+            </select>
+
+            <button class="mt-6 w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Generar mi kit</button>
+          </form>
+
+          <aside class="rounded-[1.5rem] border border-white/10 bg-black/40 p-5">
+            <p class="text-sm font-bold text-white/50">Resultado</p>
+            <h3 class="mt-1 text-2xl font-black">Tu kit personalizado</h3>
+            <p id="summary" class="mt-2 text-sm text-white/60">Completa el formulario y genera tu lista.</p>
+            <div class="my-5 h-44 rounded-2xl border border-white/10 bg-[url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80')] bg-cover bg-center"></div>
+            <div id="result" class="space-y-3 text-sm text-white/75">
+              <p class="rounded-xl border border-white/10 bg-white/5 p-3">Aún no hay recomendaciones.</p>
+            </div>
+            <button id="copyBtn" class="mt-5 w-full rounded-xl border border-white/15 px-5 py-3 font-bold text-white/80 transition hover:bg-white/10" type="button">Copiar lista</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="recomendado" class="mx-auto max-w-7xl px-5 pb-24">
+      <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div>
+          <p class="mb-3 text-xs font-black uppercase tracking-[.24em] text-survival-400">Lo esencial para empezar</p>
+          <h2 class="text-4xl font-black tracking-tight">Equipamiento recomendado</h2>
+          <p class="mt-3 text-white/60">Categorías base para futuras comparativas y enlaces de afiliación.</p>
+        </div>
+        <a href="pages/equipamiento/index.html" class="w-fit rounded-xl border border-white/15 px-5 py-3 font-bold text-white/75 hover:bg-white/10">Ver comparativas</a>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1478827387698-1527781a4887?auto=format&fit=crop&w=700&q=80" alt="Linterna de emergencia" />
+          <div class="p-5"><h3 class="font-black">Linternas</h3><p class="mt-2 text-sm text-white/50">Desde 15€</p></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=700&q=80" alt="Agua en naturaleza" />
+          <div class="p-5"><h3 class="font-black">Filtros de agua</h3><p class="mt-2 text-sm text-white/50">Desde 20€</p></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1516223725307-6f76b9182f7a?auto=format&fit=crop&w=700&q=80" alt="Radio" />
+          <div class="p-5"><h3 class="font-black">Radios</h3><p class="mt-2 text-sm text-white/50">Desde 25€</p></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80" alt="Mochila" />
+          <div class="p-5"><h3 class="font-black">Mochilas</h3><p class="mt-2 text-sm text-white/50">Desde 35€</p></div>
+        </article>
+        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80" alt="Botiquín" />
+          <div class="p-5"><h3 class="font-black">Botiquín</h3><p class="mt-2 text-sm text-white/50">Desde 18€</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="newsletter" class="border-y border-white/10 bg-[url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center">
+      <div class="bg-black/65 px-5 py-16">
+        <div class="glass mx-auto max-w-4xl rounded-[2rem] p-6 md:p-8">
+          <div class="grid gap-6 md:grid-cols-[auto_1fr] md:items-center">
+            <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-survival-500 text-3xl text-black">✉️</div>
+            <div>
+              <h2 class="text-3xl font-black">Consejos semanales para estar preparado</h2>
+              <p class="mt-2 text-white/60">Captura emails desde el principio. Esta parte luego se conecta con backend.</p>
+              <form class="mt-5 flex flex-col gap-3 sm:flex-row" onsubmit="event.preventDefault(); alert('Email guardado en el MVP visual. Luego lo conectamos al backend.');">
+                <input class="min-w-0 flex-1 rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none" type="email" placeholder="Tu correo electrónico" required />
+                <button class="rounded-xl bg-survival-500 px-5 py-3 font-black text-black hover:bg-survival-300">Suscribirme gratis</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-5 py-10 text-sm text-white/45 md:flex-row">
+    <p>© 2026 KIT72h. MVP de supervivencia doméstica.</p>
+    <p>Privacidad · Afiliados · Contacto</p>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/home-generator.js"></script>
+</body>
+</html>
+

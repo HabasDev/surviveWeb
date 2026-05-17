@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipamiento | KIT72h</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            survival: {
+              50: '#f4ffe8',
+              100: '#e3ffc3',
+              300: '#a9ef61',
+              500: '#6fbe24',
+              600: '#559a17',
+              900: '#15220e'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 35px rgba(111, 190, 36, 0.22)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem),
+        linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%);
+    }
+    .hero-bg {
+      background:
+        linear-gradient(90deg, rgba(5,8,5,.95) 0%, rgba(5,8,5,.78) 48%, rgba(5,8,5,.35) 100%),
+        url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1800&q=80');
+      background-position: center;
+      background-size: cover;
+    }
+    .glass {
+      background: rgba(12, 17, 12, .76);
+      border: 1px solid rgba(255,255,255,.09);
+      backdrop-filter: blur(18px);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="../../index.html" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-survival-500/40 bg-survival-500/15 text-survival-300">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" stroke="currentColor" stroke-width="2"/><path d="M12 7v10M8 9.5l4-2.3 4 2.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <p class="text-xl font-black tracking-tight">KIT<span class="text-survival-400">72h</span></p>
+          <p class="-mt-1 text-[11px] text-white/50">Equipamiento por escenarios</p>
+        </div>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+        <a class="hover:text-white" href="../../index.html">Inicio</a>
+        <a class="hover:text-white" href="../generador.html">Generador</a>
+        <a class="text-white" href="index.html">Equipamiento</a>
+        <a class="hover:text-white" href="../../index.html#newsletter">Recursos</a>
+      </div>
+
+      <a href="../generador.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300">Generar kit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-bg border-b border-white/10">
+      <div class="mx-auto max-w-7xl px-5 py-20 md:py-28">
+        <p class="mb-4 text-xs font-black uppercase tracking-[.25em] text-survival-400">Biblioteca de equipamiento</p>
+        <h1 class="max-w-4xl text-5xl font-black leading-[.96] tracking-tight md:text-7xl">Kits separados por uso real</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">Organiza tu preparacion por escenarios: hogar, ciudad, trabajo de seguridad o perfil profesional. Cada pagina prioriza lo que tiene sentido llevar, guardar o revisar antes de comprar.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 py-16">
+      <div class="grid gap-5 md:grid-cols-2">
+        <a href="supervivencia-casa.html" class="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-survival-500/50">
+          <img class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1100&q=80" alt="Casa preparada con material de emergencia" />
+          <div class="p-6">
+            <p class="text-xs font-black uppercase tracking-[.22em] text-survival-400">Hogar</p>
+            <h2 class="mt-2 text-3xl font-black">Supervivencia en casa</h2>
+            <p class="mt-3 leading-7 text-white/60">Agua, luz, comida, comunicaciones, botiquin y autonomia para pasar 72 horas sin depender del exterior.</p>
+          </div>
+        </a>
+
+        <a href="supervivencia-urbana.html" class="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-survival-500/50">
+          <img class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=80" alt="Ciudad de noche" />
+          <div class="p-6">
+            <p class="text-xs font-black uppercase tracking-[.22em] text-survival-400">Ciudad</p>
+            <h2 class="mt-2 text-3xl font-black">Supervivencia urbana</h2>
+            <p class="mt-3 leading-7 text-white/60">Mochila ligera, documentacion, energia, movilidad y decisiones practicas para cortes, evacuaciones o incidencias urbanas.</p>
+          </div>
+        </a>
+
+        <a href="seguridad-privada.html" class="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-survival-500/50">
+          <img class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=1100&q=80" alt="Equipo profesional de trabajo" />
+          <div class="p-6">
+            <p class="text-xs font-black uppercase tracking-[.22em] text-survival-400">Profesional</p>
+            <h2 class="mt-2 text-3xl font-black">Seguridad privada</h2>
+            <p class="mt-3 leading-7 text-white/60">Organizacion de turno: comodidad, visibilidad, comunicaciones, registro de incidencias y material permitido por normativa.</p>
+          </div>
+        </a>
+
+        <a href="soldado-espanol.html" class="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-survival-500/50">
+          <img class="h-56 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1579912437766-7896df6d3cd3?auto=format&fit=crop&w=1100&q=80" alt="Equipo resistente para campo" />
+          <div class="p-6">
+            <p class="text-xs font-black uppercase tracking-[.22em] text-survival-400">Campo y servicio</p>
+            <h2 class="mt-2 text-3xl font-black">Soldado español</h2>
+            <p class="mt-3 leading-7 text-white/60">Lista orientada a orden, mantenimiento, confort, hidratacion y material personal no sensible para jornadas exigentes.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 pb-20">
+      <div class="glass rounded-[2rem] p-6 md:p-8">
+        <p class="text-xs font-black uppercase tracking-[.22em] text-survival-400">Criterio editorial</p>
+        <h2 class="mt-2 text-3xl font-black">Primero lo que resuelve problemas, despues lo que luce bien</h2>
+        <p class="mt-4 max-w-3xl leading-8 text-white/65">Las listas separan material esencial, recomendado y opcional. La idea es comprar menos, revisar mejor y adaptar cada kit a tu entorno, condicion fisica, responsabilidades y normativa aplicable.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-5 py-10 text-sm text-white/45 md:flex-row">
+    <p>© 2026 KIT72h. Equipamiento por escenarios.</p>
+    <p><a class="hover:text-white" href="../../index.html">Inicio</a> · <a class="hover:text-white" href="index.html">Equipamiento</a></p>
+  </footer>
+</body>
+</html>
+
