@@ -13,6 +13,46 @@
       "permanent": true
     },
     {
+      "source": "/pages/supervivencia-casa.html",
+      "destination": "/pages/equipamiento/supervivencia-casa.html",
+      "permanent": false
+    },
+    {
+      "source": "/pages/supervivencia-urbana.html",
+      "destination": "/pages/equipamiento/supervivencia-urbana.html",
+      "permanent": false
+    },
+    {
+      "source": "/pages/seguridad-privada.html",
+      "destination": "/pages/equipamiento/seguridad-privada.html",
+      "permanent": false
+    },
+    {
+      "source": "/pages/soldado-espanol.html",
+      "destination": "/pages/equipamiento/soldado-espanol.html",
+      "permanent": false
+    },
+    {
+      "source": "/pages/supervivencia-casa",
+      "destination": "/pages/equipamiento/supervivencia-casa",
+      "permanent": false
+    },
+    {
+      "source": "/pages/supervivencia-urbana",
+      "destination": "/pages/equipamiento/supervivencia-urbana",
+      "permanent": false
+    },
+    {
+      "source": "/pages/seguridad-privada",
+      "destination": "/pages/equipamiento/seguridad-privada",
+      "permanent": false
+    },
+    {
+      "source": "/pages/soldado-espanol",
+      "destination": "/pages/equipamiento/soldado-espanol",
+      "permanent": false
+    },
+    {
       "source": "/generador",
       "destination": "/pages/generador",
       "permanent": true
@@ -21,6 +61,12 @@
       "source": "/venta",
       "destination": "/pages/venta",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/equipamiento/:path*",
+      "destination": "/pages/equipamiento/:path*"
     }
   ]
 }
