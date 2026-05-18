@@ -5,10 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cookies | VitaGuardia</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { survival: { 400: '#86d83d' } } } } }
+  </script>
 </head>
 <body class="min-h-screen bg-[#050805] text-white">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+      <a class="text-xl font-black tracking-tight" href="../../index.html">Vita<span style="color:#86d83d">Guardia</span></a>
+      <div class="order-3 flex w-full items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-white/70 md:order-none md:w-auto md:gap-8">
+        <a class="hover:text-white" href="../../index.html">Inicio</a>
+        <a class="hover:text-white" href="../generador.html">Generador</a>
+        <a class="hover:text-white" href="../equipamiento/index.html">Equipamiento</a>
+        <a class="hover:text-white" href="../venta.html">Mi kit</a>
+        <a class="text-white" href="../../index.html#newsletter">Recursos</a>
+      </div>
+    </nav>
+  </header>
   <main class="mx-auto max-w-3xl px-5 py-14">
-    <a class="text-sm text-white/60 hover:text-white" href="../../index.html">Volver</a>
     <h1 class="mt-8 text-4xl font-black">Politica de cookies</h1>
     <p class="mt-6 leading-8 text-white/70">Esta demo no usa cookies de sesion ni login. El formulario de newsletter puede guardar una confirmacion local en el navegador con localStorage.</p>
     <p class="mt-4 leading-8 text-white/70">Si se anaden analitica, publicidad o seguimiento de afiliados, debera incorporarse un banner de consentimiento y detalle de proveedores.</p>

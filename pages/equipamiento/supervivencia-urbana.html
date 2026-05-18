@@ -13,7 +13,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { survival: { 300: '#a9ef61', 500: '#6fbe24', 600: '#559a17' } },
+          colors: { survival: { 300: '#a9ef61', 400: '#86d83d', 500: '#6fbe24', 600: '#559a17' } },
           boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' }
         }
       }
@@ -35,15 +35,16 @@
 </head>
 <body class="min-h-screen text-white antialiased">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-      <a href="../../index.html" class="text-xl font-black tracking-tight">Vita<span class="text-survival-300">Guardia</span></a>
-      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+      <a href="../../index.html" class="text-xl font-black tracking-tight">Vita<span style="color:#86d83d">Guardia</span></a>
+      <div class="order-3 flex w-full items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-white/70 md:order-none md:w-auto md:gap-8">
         <a class="hover:text-white" href="../../index.html">Inicio</a>
-        <a class="text-white" href="index.html">Equipamiento</a>
-        <a class="hover:text-white" href="supervivencia-casa.html">Casa</a>
         <a class="hover:text-white" href="../generador.html">Generador</a>
+        <a class="text-white" href="index.html">Equipamiento</a>
+        <a class="hover:text-white" href="../venta.html">Mi kit</a>
+        <a class="hover:text-white" href="../../index.html#newsletter">Recursos</a>
       </div>
-      <a href="#productos" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Comprar</a>
+      <a href="../venta.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Mi kit</a>
     </nav>
   </header>
 
@@ -103,6 +104,8 @@
     </section>
   </main>
 
+  <script src="../../assets/js/product-visuals.js"></script>
+  <script src="../../assets/js/kit-cart.js"></script>
   <script src="../../assets/js/urban-shop.js"></script>
 </body>
 </html>

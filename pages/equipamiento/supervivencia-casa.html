@@ -13,7 +13,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { survival: { 300: '#a9ef61', 500: '#6fbe24', 600: '#559a17' } },
+          colors: { survival: { 300: '#a9ef61', 400: '#86d83d', 500: '#6fbe24', 600: '#559a17' } },
           boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' }
         }
       }
@@ -31,25 +31,33 @@
       border: 1px solid rgba(255,255,255,.09);
       backdrop-filter: blur(18px);
     }
+    .home-hero-bg {
+      background:
+        linear-gradient(90deg, rgba(5, 8, 5, .94), rgba(5, 8, 5, .78), rgba(5, 8, 5, .5)),
+        url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1800&q=80');
+      background-position: center;
+      background-size: cover;
+    }
   </style>
 </head>
 <body class="min-h-screen text-white antialiased">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-      <a href="../../index.html" class="text-xl font-black tracking-tight">Vita<span class="text-survival-300">Guardia</span></a>
-      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+      <a href="../../index.html" class="text-xl font-black tracking-tight">Vita<span style="color:#86d83d">Guardia</span></a>
+      <div class="order-3 flex w-full items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-white/70 md:order-none md:w-auto md:gap-8">
         <a class="hover:text-white" href="../../index.html">Inicio</a>
-        <a class="text-white" href="index.html">Equipamiento</a>
         <a class="hover:text-white" href="../generador.html">Generador</a>
-        <a class="hover:text-white" href="../venta.html">Kit recomendado</a>
+        <a class="text-white" href="index.html">Equipamiento</a>
+        <a class="hover:text-white" href="../venta.html">Mi kit</a>
+        <a class="hover:text-white" href="../../index.html#newsletter">Recursos</a>
       </div>
-      <a href="#productos" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Comprar</a>
+      <a href="../venta.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Mi kit</a>
     </nav>
   </header>
 
   <main>
-    <section class="border-b border-white/10 bg-[url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center">
-      <div class="bg-black/72 px-5 py-16 md:py-20">
+    <section class="home-hero-bg border-b border-white/10">
+      <div class="px-5 py-16 md:py-20">
         <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_.75fr] lg:items-end">
           <div>
             <p class="text-xs font-black uppercase tracking-[.25em] text-survival-300">Tienda hogar preparado</p>
@@ -57,7 +65,7 @@
             <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">Productos organizados por problema real: apagones, agua potable, cocina sin electricidad, botiquin, seguridad y packs listos para montar.</p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#productos" class="rounded-xl bg-survival-500 px-6 py-4 text-center font-black text-black shadow-glow hover:bg-survival-300">Ver productos</a>
-              <a href="../generador.html" class="rounded-xl border border-white/20 px-6 py-4 text-center font-bold text-white hover:bg-white/10">Generar kit</a>
+              <a href="../generador.html" class="rounded-xl border border-white/30 bg-black/40 px-6 py-4 text-center font-bold text-white hover:bg-white/10">Generar kit</a>
             </div>
           </div>
 
@@ -105,6 +113,8 @@
     </section>
   </main>
 
+  <script src="../../assets/js/product-visuals.js"></script>
+  <script src="../../assets/js/kit-cart.js"></script>
   <script src="../../assets/js/home-shop.js"></script>
 </body>
 </html>

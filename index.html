@@ -18,6 +18,7 @@
               50: '#f4ffe8',
               100: '#e3ffc3',
               300: '#a9ef61',
+              400: '#86d83d',
               500: '#6fbe24',
               600: '#559a17',
               900: '#15220e'
@@ -60,20 +61,14 @@
 </head>
 <body class="min-h-screen text-white antialiased">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-      <a href="#" class="flex items-center gap-3">
-        <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-survival-500/40 bg-survival-500/15 text-survival-300">
-          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" stroke="currentColor" stroke-width="2"/><path d="M12 7v10M8 9.5l4-2.3 4 2.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div>
-          <p class="text-xl font-black tracking-tight">Vita<span class="text-survival-400">Guardia</span></p>
-          <p class="-mt-1 text-[11px] text-white/50">Prepárate. Protege a los tuyos.</p>
-        </div>
-      </a>
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+      <a href="#" class="text-xl font-black tracking-tight">Vita<span style="color:#86d83d">Guardia</span></a>
 
-      <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
+      <div class="order-3 flex w-full items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-white/70 md:order-none md:w-auto md:gap-8">
+        <a class="text-white" href="#">Inicio</a>
         <a class="hover:text-white" href="pages/generador.html">Generador</a>
         <a class="hover:text-white" href="pages/equipamiento/index.html">Equipamiento</a>
+        <a class="hover:text-white" href="pages/venta.html">Mi kit</a>
         <a class="hover:text-white" href="#newsletter">Recursos</a>
       </div>
 
@@ -116,39 +111,6 @@
       </div>
     </section>
 
-    <section class="relative z-10 mx-auto -mt-10 max-w-7xl px-5">
-      <div class="glass grid gap-3 rounded-[2rem] p-4 shadow-2xl md:grid-cols-4 md:p-5">
-        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
-          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 20 7v5c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V7l8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 class="font-black text-white">Protege a los tuyos</h3>
-          <p class="mt-2 text-sm leading-6 text-white/58">Prepara lo importante antes de que haga falta.</p>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
-          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 6h11M8 12h11M8 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3 class="font-black text-white">Planifica sin lios</h3>
-          <p class="mt-2 text-sm leading-6 text-white/58">Una lista adaptada a personas, mascotas y ubicacion.</p>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
-          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5v14M7 7c2 2 8 2 10 0M7 17c2-2 8-2 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3 class="font-black text-white">Compra mejor</h3>
-          <p class="mt-2 text-sm leading-6 text-white/58">Prioriza productos utiles y evita duplicados absurdos.</p>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
-          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3M6 11h12v9H6v-9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 class="font-black text-white">Privacidad primero</h3>
-          <p class="mt-2 text-sm leading-6 text-white/58">El calculo funciona sin pedir datos personales.</p>
-        </article>
-      </div>
-    </section>
-
     <section id="generador" class="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-[.85fr_1.15fr]">
       <div class="flex flex-col justify-center">
         <p class="mb-3 text-xs font-black uppercase tracking-[.24em] text-survival-400">Herramienta principal</p>
@@ -158,7 +120,6 @@
           <li>✅ 100% personalizado</li>
           <li>✅ Según hogar, familia y ubicación</li>
           <li>✅ Adaptado a presupuesto</li>
-          <li>✅ Preparado para monetización por afiliados</li>
         </ul>
       </div>
 
