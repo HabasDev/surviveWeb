@@ -7,18 +7,13 @@
 
   if (!form || !result || !summary || !saleLink || !copyBtn) return;
 
-  const kits = {
-    basic: ['Agua potable para 72h', 'Linterna LED', 'Pilas o bateria externa', 'Botiquin basico', 'Comida no perecedera', 'Manta termica'],
-    medium: ['Agua potable para 72h', 'Filtro o pastillas potabilizadoras', 'Radio de emergencia', 'Linterna frontal', 'Botiquin completo', 'Comida no perecedera', 'Powerbank', 'Manta termica', 'Navaja multiusos'],
-    pro: ['Agua potable para 72h', 'Filtro de agua', 'Radio solar/manivela', 'Linterna frontal y principal', 'Botiquin completo', 'Comida liofilizada o conservas', 'Powerbank grande', 'Mantas termicas', 'Multiherramienta', 'Hornillo portatil', 'Silbato y senalizacion']
-  };
-
   const labels = {
     budget: { basic: 'basico', medium: 'medio', pro: 'completo' },
     zone: { city: 'ciudad', town: 'pueblo', rural: 'zona rural', coast: 'costa' }
   };
 
   let currentList = [];
+  let currentProducts = [];
 
   const setFromParams = () => {
     const params = new URLSearchParams(window.location.search);
@@ -35,9 +30,15 @@
     const zone = document.querySelector('#zone').value;
     const budget = document.querySelector('#budget').value;
 
-    currentList = [...kits[budget]];
-    currentList.unshift(`${people * 3} litros minimos de agua por dia para el hogar`);
-    currentList.push(`${people} raciones diarias de comida durante 3 dias`);
+    currentProducts = window.getRecommendedProducts
+      ? window.getRecommendedProducts({ budget, zone })
+      : [];
+
+    currentList = [
+      `${people * 3} litros minimos de agua por dia para el hogar`,
+      `${people} raciones diarias de comida durante 3 dias`,
+      ...currentProducts.map((product) => product.nombre)
+    ];
 
     if (pets === 'yes') currentList.push('Comida, agua y documentacion de mascotas');
     if (zone === 'rural') currentList.push('Mapa fisico de la zona y silbato de emergencia');
@@ -45,15 +46,28 @@
     if (zone === 'city') currentList.push('Copias de llaves, efectivo y contactos impresos');
 
     summary.textContent = `Recomendacion para ${people} persona${people > 1 ? 's' : ''}, presupuesto ${labels.budget[budget]} y entorno ${labels.zone[zone]}.`;
-    result.innerHTML = currentList.map((item, index) => `
-      <div class="flex gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
-        <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-survival-500 text-xs font-black text-black">${index + 1}</span>
-        <p class="text-white/75">${item}</p>
+    result.innerHTML = `
+      <div class="md:col-span-2 rounded-xl border border-white/10 bg-white/5 p-4">
+        <p class="font-black text-white">Necesidades base</p>
+        <p class="mt-2 text-sm text-white/65">${people * 3} litros minimos de agua por dia, ${people} raciones diarias durante 3 dias${pets === 'yes' ? ' y comida/documentacion de mascotas' : ''}.</p>
       </div>
-    `).join('');
+      ${currentProducts.map((product, index) => `
+        <article class="rounded-xl border border-white/10 bg-white/5 p-4">
+          <div class="flex items-start gap-3">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-survival-500 text-xs font-black text-black">${index + 1}</span>
+            <div>
+              <p class="font-black text-white">${product.nombre}</p>
+              <p class="mt-1 text-sm text-white/55">${product.proveedor} · ${product.tierLabel || 'Consultar en tienda'}</p>
+              <a class="mt-3 inline-flex rounded-lg border border-survival-500/40 px-3 py-2 text-sm font-bold text-survival-300 hover:bg-survival-500/10" href="${product.enlace}" target="_blank" rel="nofollow sponsored noopener">Ver producto</a>
+            </div>
+          </div>
+        </article>
+      `).join('')}
+    `;
 
     const params = new URLSearchParams({ people, pets, zone, budget });
     saleLink.href = `venta.html?${params.toString()}`;
+    localStorage.setItem('vitaguardia:lastKit', JSON.stringify({ people, pets, zone, budget, products: currentProducts.map((product) => product.id) }));
   }
 
   form.addEventListener('submit', (event) => {

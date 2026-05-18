@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kit recomendado | KIT72h</title>
+  <title>Kit recomendado | VitaGuardia</title>
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/vitaguardia-favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/vitaguardia-favicon-192.png" />
   <link rel="apple-touch-icon" sizes="512x512" href="../assets/favicons/vitaguardia-favicon-512.png" />
@@ -42,15 +42,15 @@
 <body class="min-h-screen text-white antialiased">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-      <a href="../index.html" class="text-xl font-black tracking-tight">KIT<span class="text-survival-300">72h</span></a>
+      <a href="../index.html" class="text-xl font-black tracking-tight">Vita<span class="text-survival-300">Guardia</span></a>
       <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
         <a class="hover:text-white" href="../index.html">Inicio</a>
         <a class="hover:text-white" href="generador.html">Generador</a>
         <a class="hover:text-white" href="equipamiento/index.html">Equipamiento</a>
-        <a class="text-white" href="venta.html">Venta</a>
+        <a class="text-white" href="venta.html">Kit recomendado</a>
         <a class="hover:text-white" href="../index.html#newsletter">Recursos</a>
       </div>
-      <a href="#checkout" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300">Reservar</a>
+      <a href="#productos" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300">Ver productos</a>
     </nav>
   </header>
 
@@ -58,20 +58,20 @@
     <section class="sale-bg border-b border-white/10">
       <div class="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[1fr_.78fr] lg:py-28">
         <div>
-          <p class="mb-4 text-xs font-black uppercase tracking-[.25em] text-survival-300">Oferta recomendada</p>
-          <h1 class="max-w-4xl text-5xl font-black leading-[.96] tracking-tight md:text-7xl">Kit 72h listo para empezar</h1>
-          <p id="heroCopy" class="mt-6 max-w-2xl text-lg leading-8 text-white/72">Un pack pensado para cubrir agua, luz, energia, botiquin, comida y organizacion sin comprar piezas sueltas a ciegas.</p>
+          <p class="mb-4 text-xs font-black uppercase tracking-[.25em] text-survival-300">Compra con criterio</p>
+          <h1 class="max-w-4xl text-5xl font-black leading-[.96] tracking-tight md:text-7xl">Tu kit VitaGuardia recomendado</h1>
+          <p id="heroCopy" class="mt-6 max-w-2xl text-lg leading-8 text-white/72">Una lista de productos externos para cubrir agua, luz, energia, botiquin, comunicacion y organizacion sin comprar un pack falso.</p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#checkout" class="rounded-xl bg-survival-500 px-6 py-4 text-center font-black text-black shadow-glow transition hover:bg-survival-300">Quiero este kit</a>
+            <a href="#productos" class="rounded-xl bg-survival-500 px-6 py-4 text-center font-black text-black shadow-glow transition hover:bg-survival-300">Ver productos</a>
             <a href="generador.html" class="rounded-xl border border-white/20 px-6 py-4 text-center font-bold text-white transition hover:bg-white/10">Ajustar recomendacion</a>
           </div>
         </div>
 
         <aside class="glass rounded-[2rem] p-6 shadow-2xl">
-          <p class="text-sm font-bold text-survival-300">Pack recomendado</p>
-          <h2 id="packTitle" class="mt-2 text-3xl font-black">KIT72h Medio</h2>
-          <p id="packPrice" class="mt-4 text-5xl font-black">149 EUR</p>
-          <p class="mt-3 text-sm leading-6 text-white/60">Precio de maqueta para preparar la pagina. Luego se conecta a Stripe, afiliados o tienda.</p>
+          <p class="text-sm font-bold text-survival-300">Estimacion total</p>
+          <h2 id="packTitle" class="mt-2 text-3xl font-black">Tu kit VitaGuardia recomendado</h2>
+          <p id="packPrice" class="mt-4 text-5xl font-black">Consultar en tienda</p>
+          <p class="mt-3 text-sm leading-6 text-white/60">Lista de productos externos. Sustituye los enlaces por afiliados reales cuando cierres proveedores.</p>
           <ul id="packItems" class="mt-6 space-y-3 text-white/72"></ul>
         </aside>
       </div>
@@ -81,7 +81,7 @@
       <div class="grid gap-5 md:grid-cols-3">
         <article class="glass rounded-[1.5rem] p-6">
           <h2 class="text-2xl font-black">Compra con criterio</h2>
-          <p class="mt-3 leading-7 text-white/65">El pack agrupa lo esencial para evitar duplicados y compras impulsivas.</p>
+          <p class="mt-3 leading-7 text-white/65">La lista prioriza categorias utiles para evitar duplicados y compras impulsivas.</p>
         </article>
         <article class="glass rounded-[1.5rem] p-6">
           <h2 class="text-2xl font-black">Checklist incluido</h2>
@@ -94,32 +94,50 @@
       </div>
     </section>
 
+    <section id="productos" class="mx-auto max-w-7xl px-5 pb-20">
+      <div class="mb-8">
+        <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Lista de compra</p>
+        <h2 class="mt-2 text-4xl font-black">Productos esenciales</h2>
+      </div>
+      <div id="essentialProducts" class="grid gap-4 md:grid-cols-2"></div>
+
+      <div class="mb-8 mt-12">
+        <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Mejoras utiles</p>
+        <h2 class="mt-2 text-4xl font-black">Productos recomendados</h2>
+      </div>
+      <div id="recommendedProducts" class="grid gap-4 md:grid-cols-2"></div>
+
+      <p id="affiliateNotice" class="mt-8 hidden rounded-xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-white/65">Los productos recomendados pueden incluir enlaces de afiliado. Los precios, disponibilidad y condiciones finales son los mostrados por la tienda externa en el momento de la compra.</p>
+    </section>
+
     <section id="checkout" class="mx-auto max-w-7xl px-5 pb-20">
       <div class="grid gap-5 lg:grid-cols-[1fr_.7fr]">
         <div class="glass rounded-[2rem] p-6 md:p-8">
-          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Pagina de venta</p>
-          <h2 class="mt-2 text-4xl font-black">Reserva o deja tu email</h2>
-          <p class="mt-4 max-w-2xl leading-8 text-white/65">Esta maqueta deja preparada la conversion. El siguiente paso seria conectar un pago real, productos afiliados o un formulario de preventa.</p>
-          <form class="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]" onsubmit="event.preventDefault(); alert('Solicitud guardada en el MVP visual.');">
+          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Seguimiento</p>
+          <h2 class="mt-2 text-4xl font-black">Recibe futuras comparativas</h2>
+          <p class="mt-4 max-w-2xl leading-8 text-white/65">Deja tu email para recibir guias, comparativas y avisos cuando haya ofertas utiles para kits de emergencia.</p>
+          <form id="saleNewsletterForm" class="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]">
             <input class="min-w-0 rounded-xl border border-white/10 bg-white px-4 py-4 text-black outline-none" type="email" placeholder="Tu correo electronico" required />
             <button class="rounded-xl bg-survival-500 px-6 py-4 font-black text-black hover:bg-survival-300">Avisadme</button>
           </form>
         </div>
 
         <aside class="rounded-[2rem] border border-survival-500/30 bg-survival-500/10 p-6 md:p-8">
-          <h2 class="text-3xl font-black">Que faltaria para vender de verdad</h2>
+          <h2 class="text-3xl font-black">Pendiente para produccion</h2>
           <ul class="mt-5 space-y-3 text-white/72">
-            <li>Pasarela de pago o enlaces de afiliado</li>
-            <li>Stock, envio y politica de devoluciones</li>
-            <li>Ficha legal y privacidad</li>
-            <li>Fotos reales del producto final</li>
+            <li>Sustituir placeholders por enlaces afiliados finales</li>
+            <li>Validar disponibilidad y condiciones antes de publicar</li>
+            <li>Completar politicas legales definitivas</li>
+            <li>Medir clics y conversiones por producto</li>
           </ul>
         </aside>
       </div>
     </section>
   </main>
 
+  <script src="../assets/js/products.js"></script>
   <script src="../assets/js/sale-page.js"></script>
+  <script src="../assets/js/newsletter.js"></script>
 </body>
 </html>
 

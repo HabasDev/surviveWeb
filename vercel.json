@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/equipamiento",
+      "destination": "/pages/equipamiento",
+      "permanent": true
+    },
+    {
+      "source": "/generador",
+      "destination": "/pages/generador",
+      "permanent": true
+    },
+    {
+      "source": "/venta",
+      "destination": "/pages/venta",
+      "permanent": true
+    }
+  ]
+}

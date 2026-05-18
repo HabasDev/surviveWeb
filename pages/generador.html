@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generador de kits | KIT72h</title>
+  <title>VitaGuardia | Generador de kits de emergencia</title>
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/vitaguardia-favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/vitaguardia-favicon-192.png" />
   <link rel="apple-touch-icon" sizes="512x512" href="../assets/favicons/vitaguardia-favicon-512.png" />
@@ -35,7 +35,7 @@
 <body class="min-h-screen text-white antialiased">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-      <a href="../index.html" class="text-xl font-black tracking-tight">KIT<span class="text-survival-300">72h</span></a>
+      <a href="../index.html" class="text-xl font-black tracking-tight">Vita<span class="text-survival-300">Guardia</span></a>
       <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
         <a class="hover:text-white" href="../index.html">Inicio</a>
         <a class="hover:text-white" href="equipamiento/index.html">Equipamiento</a>
@@ -43,7 +43,7 @@
         <a class="hover:text-white" href="venta.html">Kit recomendado</a>
         <a class="hover:text-white" href="../index.html#newsletter">Recursos</a>
       </div>
-      <a href="venta.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300">Ver oferta</a>
+      <a href="venta.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300">Ver kit</a>
     </nav>
   </header>
 
@@ -51,8 +51,8 @@
     <section class="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[.9fr_1.1fr] lg:py-24">
       <div class="flex flex-col justify-center">
         <p class="mb-4 text-xs font-black uppercase tracking-[.25em] text-survival-300">Paso 1</p>
-        <h1 class="max-w-2xl text-5xl font-black leading-[.96] tracking-tight md:text-7xl">Genera tu kit 72h</h1>
-        <p class="mt-6 max-w-xl text-lg leading-8 text-white/70">Responde a estas preguntas y te preparo una lista base. Al final puedes pasar a la pagina de venta para comprar el kit completo o usarlo como checklist.</p>
+        <h1 class="max-w-2xl text-5xl font-black leading-[.96] tracking-tight md:text-7xl">Genera tu kit VitaGuardia</h1>
+        <p class="mt-6 max-w-xl text-lg leading-8 text-white/70">Responde a estas preguntas y te preparo una lista base con productos externos para comprar por prioridad, presupuesto y escenario.</p>
         <div class="mt-8 grid gap-3 text-sm text-white/65 sm:grid-cols-2">
           <p class="rounded-xl border border-white/10 bg-white/5 p-4">Sin cuenta obligatoria</p>
           <p class="rounded-xl border border-white/10 bg-white/5 p-4">Resultado inmediato</p>
@@ -92,9 +92,9 @@
           <div>
             <label class="block text-sm font-bold text-white/80" for="budget">Presupuesto</label>
             <select id="budget" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="basic">Basico: 50-100 EUR</option>
-              <option value="medium" selected>Medio: 100-200 EUR</option>
-              <option value="pro">Completo: 200-400 EUR</option>
+              <option value="basic">Basico: lo imprescindible</option>
+              <option value="medium" selected>Equilibrado: mejor relacion calidad-precio</option>
+              <option value="pro">Completo: preparacion avanzada</option>
             </select>
           </div>
           <button class="md:col-span-2 rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Generar recomendacion</button>
@@ -115,8 +115,8 @@
 
         <aside class="glass rounded-[2rem] p-6 md:p-8">
           <p class="text-sm font-bold text-survival-300">Paso 2</p>
-          <h2 class="mt-2 text-3xl font-black">Comprar el kit completo</h2>
-          <p class="mt-3 leading-7 text-white/65">Cuando tengas el resultado, pasa a la pagina de venta para ver el pack recomendado, beneficios, garantia y opciones.</p>
+          <h2 class="mt-2 text-3xl font-black">Ver lista de compra</h2>
+          <p class="mt-3 leading-7 text-white/65">Cuando tengas el resultado, pasa a la pagina de kit recomendado para ver productos externos y botones de compra.</p>
           <a id="saleLink" href="venta.html" class="mt-6 block rounded-xl bg-survival-500 px-5 py-4 text-center font-black text-black shadow-glow transition hover:bg-survival-300">Ver kit recomendado</a>
           <button id="copyBtn" class="mt-3 w-full rounded-xl border border-white/15 px-5 py-3 font-bold text-white/80 transition hover:bg-white/10" type="button">Copiar checklist</button>
         </aside>
@@ -124,6 +124,7 @@
     </section>
   </main>
 
+  <script src="../assets/js/products.js"></script>
   <script src="../assets/js/kit-generator.js"></script>
 </body>
 </html>

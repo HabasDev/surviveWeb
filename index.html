@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KIT72h | Generador de kits de emergencia</title>
+  <title>VitaGuardia | Generador de kits de emergencia</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/vitaguardia-favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/vitaguardia-favicon-192.png" />
   <link rel="apple-touch-icon" sizes="512x512" href="assets/favicons/vitaguardia-favicon-512.png" />
@@ -66,7 +66,7 @@
           <svg width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" stroke="currentColor" stroke-width="2"/><path d="M12 7v10M8 9.5l4-2.3 4 2.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div>
-          <p class="text-xl font-black tracking-tight">KIT<span class="text-survival-400">72h</span></p>
+          <p class="text-xl font-black tracking-tight">Vita<span class="text-survival-400">Guardia</span></p>
           <p class="-mt-1 text-[11px] text-white/50">Prepárate. Protege a los tuyos.</p>
         </div>
       </a>
@@ -77,64 +77,9 @@
         <a class="hover:text-white" href="#newsletter">Recursos</a>
       </div>
 
-      <div id="guestActions" class="flex items-center gap-2">
-        <button id="openLogin" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-bold text-white/80 transition hover:bg-white/10" type="button">Entrar</button>
-        <button id="openRegister" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300" type="button">Crear cuenta</button>
-      </div>
-
-      <div id="userActions" class="hidden items-center gap-3">
-        <span id="userGreeting" class="hidden text-sm font-bold text-white/70 sm:inline"></span>
-        <button id="logoutBtn" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-bold text-white/80 transition hover:bg-white/10" type="button">Salir</button>
-      </div>
+      <a class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-bold text-black shadow-glow transition hover:bg-survival-300" href="pages/generador.html">Crear kit gratis</a>
     </nav>
   </header>
-
-  <div id="authModal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-black/80 px-5 py-8 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-    <div class="glass relative w-full max-w-md rounded-[2rem] p-6 shadow-2xl">
-      <button id="closeAuth" class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xl text-white/60 transition hover:bg-white/10 hover:text-white" type="button" aria-label="Cerrar">&times;</button>
-
-      <div class="mb-6 pr-10">
-        <p class="text-xs font-black uppercase tracking-[.24em] text-survival-400">Tu cuenta KIT72h</p>
-        <h2 id="authTitle" class="mt-2 text-3xl font-black tracking-tight">Accede a tus kits</h2>
-        <p class="mt-2 text-sm leading-6 text-white/60">Crea una cuenta local para guardar el acceso en este MVP. El backend real se puede conectar despues.</p>
-      </div>
-
-      <div class="mb-5 grid grid-cols-2 rounded-xl border border-white/10 bg-black/35 p-1">
-        <button id="loginTab" class="rounded-lg bg-survival-500 px-4 py-2 text-sm font-black text-black" type="button">Login</button>
-        <button id="registerTab" class="rounded-lg px-4 py-2 text-sm font-black text-white/65 transition hover:text-white" type="button">Registro</button>
-      </div>
-
-      <p id="authMessage" class="mb-4 hidden rounded-xl border px-4 py-3 text-sm font-bold"></p>
-
-      <form id="loginForm" class="space-y-4">
-        <div>
-          <label class="block text-sm font-bold text-white/80" for="loginEmail">Correo electronico</label>
-          <input id="loginEmail" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="email" autocomplete="email" required />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-white/80" for="loginPassword">Contrasena</label>
-          <input id="loginPassword" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="password" autocomplete="current-password" minlength="8" required />
-        </div>
-        <button class="w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Iniciar sesion</button>
-      </form>
-
-      <form id="registerForm" class="hidden space-y-4">
-        <div>
-          <label class="block text-sm font-bold text-white/80" for="registerName">Nombre</label>
-          <input id="registerName" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="text" autocomplete="name" minlength="2" required />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-white/80" for="registerEmail">Correo electronico</label>
-          <input id="registerEmail" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="email" autocomplete="email" required />
-        </div>
-        <div>
-          <label class="block text-sm font-bold text-white/80" for="registerPassword">Contrasena</label>
-          <input id="registerPassword" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500" type="password" autocomplete="new-password" minlength="8" required />
-        </div>
-        <button class="w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Crear cuenta</button>
-      </form>
-    </div>
-  </div>
 
   <main>
     <section class="hero-bg border-b border-white/10">
@@ -172,26 +117,34 @@
     </section>
 
     <section class="relative z-10 mx-auto -mt-10 max-w-7xl px-5">
-      <div class="grid gap-4 rounded-3xl bg-white p-5 text-slate-950 shadow-2xl md:grid-cols-4 md:p-8">
-        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
-          <p class="mb-3 text-3xl">🛡️</p>
-          <h3 class="font-black">Protege a los tuyos</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600">Prepara lo importante antes de que haga falta.</p>
+      <div class="glass grid gap-3 rounded-[2rem] p-4 shadow-2xl md:grid-cols-4 md:p-5">
+        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 20 7v5c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V7l8-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-black text-white">Protege a los tuyos</h3>
+          <p class="mt-2 text-sm leading-6 text-white/58">Prepara lo importante antes de que haga falta.</p>
         </article>
-        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
-          <p class="mb-3 text-3xl">📋</p>
-          <h3 class="font-black">Planifica sin líos</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600">Una lista adaptada a personas, mascotas y ubicación.</p>
+        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 6h11M8 12h11M8 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-black text-white">Planifica sin lios</h3>
+          <p class="mt-2 text-sm leading-6 text-white/58">Una lista adaptada a personas, mascotas y ubicacion.</p>
         </article>
-        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
-          <p class="mb-3 text-3xl">💸</p>
-          <h3 class="font-black">Ahorra dinero</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600">Prioriza compras útiles y evita duplicados absurdos.</p>
+        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5v14M7 7c2 2 8 2 10 0M7 17c2-2 8-2 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-black text-white">Compra mejor</h3>
+          <p class="mt-2 text-sm leading-6 text-white/58">Prioriza productos utiles y evita duplicados absurdos.</p>
         </article>
-        <article class="rounded-2xl p-5 transition hover:bg-slate-100">
-          <p class="mb-3 text-3xl">🔒</p>
-          <h3 class="font-black">Privacidad primero</h3>
-          <p class="mt-2 text-sm leading-6 text-slate-600">El cálculo funciona en local en este primer MVP.</p>
+        <article class="rounded-2xl border border-white/10 bg-white/[.04] p-5 transition hover:border-survival-500/35 hover:bg-survival-500/10">
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-survival-500/15 text-survival-300">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3M6 11h12v9H6v-9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="font-black text-white">Privacidad primero</h3>
+          <p class="mt-2 text-sm leading-6 text-white/58">El calculo funciona sin pedir datos personales.</p>
         </article>
       </div>
     </section>
@@ -245,9 +198,9 @@
 
             <label class="mt-5 block text-sm font-bold text-white/80" for="budget">Presupuesto aproximado</label>
             <select id="budget" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="basic">Básico: 50-100 €</option>
-              <option value="medium" selected>Medio: 100-200 €</option>
-              <option value="pro">Completo: 200-400 €</option>
+              <option value="basic">Basico: lo imprescindible</option>
+              <option value="medium" selected>Equilibrado: mejor relacion calidad-precio</option>
+              <option value="pro">Completo: preparacion avanzada</option>
             </select>
 
             <button class="mt-6 w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Generar mi kit</button>
@@ -280,23 +233,23 @@
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
           <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1478827387698-1527781a4887?auto=format&fit=crop&w=700&q=80" alt="Linterna de emergencia" />
-          <div class="p-5"><h3 class="font-black">Linternas</h3><p class="mt-2 text-sm text-white/50">Desde 15€</p></div>
+          <div class="p-5"><h3 class="font-black">Linternas</h3><p class="mt-2 text-sm text-white/50">Opcion basica</p></div>
         </article>
         <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
           <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=700&q=80" alt="Agua en naturaleza" />
-          <div class="p-5"><h3 class="font-black">Filtros de agua</h3><p class="mt-2 text-sm text-white/50">Desde 20€</p></div>
+          <div class="p-5"><h3 class="font-black">Filtros de agua</h3><p class="mt-2 text-sm text-white/50">Mejor relacion calidad-precio</p></div>
         </article>
         <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
           <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1516223725307-6f76b9182f7a?auto=format&fit=crop&w=700&q=80" alt="Radio" />
-          <div class="p-5"><h3 class="font-black">Radios</h3><p class="mt-2 text-sm text-white/50">Desde 25€</p></div>
+          <div class="p-5"><h3 class="font-black">Radios</h3><p class="mt-2 text-sm text-white/50">Recomendado</p></div>
         </article>
         <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
           <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80" alt="Mochila" />
-          <div class="p-5"><h3 class="font-black">Mochilas</h3><p class="mt-2 text-sm text-white/50">Desde 35€</p></div>
+          <div class="p-5"><h3 class="font-black">Mochilas</h3><p class="mt-2 text-sm text-white/50">Opcion premium</p></div>
         </article>
         <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
           <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80" alt="Botiquín" />
-          <div class="p-5"><h3 class="font-black">Botiquín</h3><p class="mt-2 text-sm text-white/50">Desde 18€</p></div>
+          <div class="p-5"><h3 class="font-black">Botiquín</h3><p class="mt-2 text-sm text-white/50">Recomendado</p></div>
         </article>
       </div>
     </section>
@@ -308,8 +261,8 @@
             <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-survival-500 text-3xl text-black">✉️</div>
             <div>
               <h2 class="text-3xl font-black">Consejos semanales para estar preparado</h2>
-              <p class="mt-2 text-white/60">Captura emails desde el principio. Esta parte luego se conecta con backend.</p>
-              <form class="mt-5 flex flex-col gap-3 sm:flex-row" onsubmit="event.preventDefault(); alert('Email guardado en el MVP visual. Luego lo conectamos al backend.');">
+              <p class="mt-2 text-white/60">Demo publica sin backend: el formulario solo confirma la suscripcion en este navegador.</p>
+              <form id="newsletterForm" class="mt-5 flex flex-col gap-3 sm:flex-row">
                 <input class="min-w-0 flex-1 rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none" type="email" placeholder="Tu correo electrónico" required />
                 <button class="rounded-xl bg-survival-500 px-5 py-3 font-black text-black hover:bg-survival-300">Suscribirme gratis</button>
               </form>
@@ -321,11 +274,11 @@
   </main>
 
   <footer class="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-5 py-10 text-sm text-white/45 md:flex-row">
-    <p>© 2026 KIT72h. MVP de supervivencia doméstica.</p>
-    <p>Privacidad · Afiliados · Contacto</p>
+    <p>© 2026 VitaGuardia. Preparacion domestica con criterio.</p>
+    <p><a class="hover:text-white" href="pages/legal/privacidad.html">Privacidad</a> · <a class="hover:text-white" href="pages/legal/afiliados.html">Afiliados</a> · <a class="hover:text-white" href="contacto.html">Contacto</a></p>
   </footer>
 
-  <script src="assets/js/auth.js"></script>
   <script src="assets/js/home-generator.js"></script>
+  <script src="assets/js/newsletter.js"></script>
 </body>
 </html>

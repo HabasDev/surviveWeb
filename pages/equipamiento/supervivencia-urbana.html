@@ -3,84 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Supervivencia urbana | KIT72h</title>
+  <title>Tienda supervivencia urbana | VitaGuardia</title>
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/vitaguardia-favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicons/vitaguardia-favicon-192.png" />
   <link rel="apple-touch-icon" sizes="512x512" href="../../assets/favicons/vitaguardia-favicon-512.png" />
   <meta name="theme-color" content="#050805" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { survival: { 300: '#a9ef61', 500: '#6fbe24' } }, boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' } } } }
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { survival: { 300: '#a9ef61', 500: '#6fbe24', 600: '#559a17' } },
+          boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' }
+        }
+      }
+    }
   </script>
   <style>
-    body { background: radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem), linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%); }
-    .glass { background: rgba(12, 17, 12, .76); border: 1px solid rgba(255,255,255,.09); backdrop-filter: blur(18px); }
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem),
+        linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%);
+    }
+    .glass {
+      background: rgba(12, 17, 12, .76);
+      border: 1px solid rgba(255,255,255,.09);
+      backdrop-filter: blur(18px);
+    }
   </style>
 </head>
 <body class="min-h-screen text-white antialiased">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-      <a href="../../index.html" class="text-xl font-black tracking-tight">KIT<span class="text-survival-300">72h</span></a>
+      <a href="../../index.html" class="text-xl font-black tracking-tight">Vita<span class="text-survival-300">Guardia</span></a>
       <div class="hidden items-center gap-8 text-sm text-white/70 md:flex">
         <a class="hover:text-white" href="../../index.html">Inicio</a>
         <a class="text-white" href="index.html">Equipamiento</a>
         <a class="hover:text-white" href="supervivencia-casa.html">Casa</a>
-        <a class="hover:text-white" href="seguridad-privada.html">Seguridad privada</a>
+        <a class="hover:text-white" href="../generador.html">Generador</a>
       </div>
-      <a href="index.html" class="rounded-xl border border-white/15 px-4 py-2 text-sm font-bold text-white/80 hover:bg-white/10">Volver</a>
+      <a href="#productos" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Comprar</a>
     </nav>
   </header>
 
   <main>
     <section class="border-b border-white/10 bg-[url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center">
-      <div class="bg-black/72 px-5 py-20">
-        <div class="mx-auto max-w-7xl">
-          <p class="text-xs font-black uppercase tracking-[.25em] text-survival-300">Ciudad y movilidad</p>
-          <h1 class="mt-4 max-w-4xl text-5xl font-black leading-[.96] md:text-7xl">Supervivencia urbana</h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">Preparacion discreta para cortes de luz, transporte bloqueado, evacuaciones, esperas largas o volver a casa con seguridad.</p>
+      <div class="bg-black/72 px-5 py-16 md:py-20">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_.75fr] lg:items-end">
+          <div>
+            <p class="text-xs font-black uppercase tracking-[.25em] text-survival-300">Tienda ciudad y movilidad</p>
+            <h1 class="mt-4 max-w-4xl text-5xl font-black leading-[.96] md:text-7xl">Compra tu kit urbano de emergencia</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">Productos discretos para moverte, volver a casa andando, mantener el movil vivo, guardar documentos y resolver incidencias urbanas sin postureo raro.</p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#productos" class="rounded-xl bg-survival-500 px-6 py-4 text-center font-black text-black shadow-glow hover:bg-survival-300">Ver productos</a>
+              <a href="../generador.html" class="rounded-xl border border-white/20 px-6 py-4 text-center font-bold text-white hover:bg-white/10">Generar kit</a>
+            </div>
+          </div>
+
+          <aside class="glass rounded-[1.5rem] p-6">
+            <p class="text-sm font-black text-survival-300">Pack destacado</p>
+            <h2 class="mt-2 text-3xl font-black">Kit vuelta a casa</h2>
+            <p class="mt-3 leading-7 text-white/65">Calzado, clima, agua, energia, mapa y botiquin antiampollas para volver si se para el transporte.</p>
+            <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-3"><b class="block text-xl text-white">12</b><span class="text-white/50">categorias</span></div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-3"><b class="block text-xl text-white">30</b><span class="text-white/50">productos</span></div>
+              <div class="rounded-xl border border-white/10 bg-white/5 p-3"><b class="block text-xl text-white">EDC</b><span class="text-white/50">discreto</span></div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto grid max-w-7xl gap-5 px-5 py-16 lg:grid-cols-3">
-      <article class="glass rounded-[1.5rem] p-6">
-        <p class="text-sm font-black text-survival-300">01 · Mochila diaria</p>
-        <h2 class="mt-2 text-2xl font-black">Ligero y discreto</h2>
-        <ul class="mt-5 space-y-3 text-white/70">
-          <li>Botella de agua reutilizable</li>
-          <li>Powerbank pequeno y cable corto</li>
-          <li>Linterna compacta</li>
-          <li>Mini botiquin y medicacion personal</li>
-          <li>Mascarilla, gel y panuelos</li>
-          <li>Efectivo, tarjeta secundaria y copia de llaves</li>
-        </ul>
-      </article>
-      <article class="glass rounded-[1.5rem] p-6">
-        <p class="text-sm font-black text-survival-300">02 · Vuelta a casa</p>
-        <h2 class="mt-2 text-2xl font-black">Moverte con margen</h2>
-        <ul class="mt-5 space-y-3 text-white/70">
-          <li>Calzado comodo o calcetines de repuesto</li>
-          <li>Mapa offline y puntos de encuentro</li>
-          <li>Chubasquero compacto</li>
-          <li>Barrita energetica o comida simple</li>
-          <li>Silbato de emergencia</li>
-          <li>Lista impresa de contactos importantes</li>
-        </ul>
-      </article>
-      <article class="glass rounded-[1.5rem] p-6">
-        <p class="text-sm font-black text-survival-300">03 · Casa/vehiculo</p>
-        <h2 class="mt-2 text-2xl font-black">Reserva urbana</h2>
-        <ul class="mt-5 space-y-3 text-white/70">
-          <li>Kit de agua y comida para 24h</li>
-          <li>Manta termica y guantes</li>
-          <li>Cargador de coche o adaptador</li>
-          <li>Documentos digitalizados y protegidos</li>
-          <li>Bolsa estanca pequena</li>
-          <li>Notas con rutas alternativas</li>
-        </ul>
-      </article>
+    <section id="productos" class="mx-auto max-w-7xl px-5 py-12">
+      <div class="mb-8 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+        <div>
+          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Catalogo urbano</p>
+          <h2 class="mt-2 text-4xl font-black">Articulos para supervivencia urbana</h2>
+          <p class="mt-3 max-w-2xl leading-7 text-white/60">Cambia enlaces y etiquetas en <span class="font-bold text-white">assets/js/urban-shop.js</span>. Cada boton puede apuntar a Amazon, Decathlon, afiliados o tienda propia.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/60">
+          <span id="urbanProductCount" class="font-black text-white">0</span> productos disponibles
+        </div>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-[280px_1fr]">
+        <aside class="glass h-fit rounded-[1.5rem] p-4 lg:sticky lg:top-24">
+          <button id="urbanCategoryMenuToggle" class="flex w-full items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left font-black text-white lg:hidden" type="button" aria-expanded="false">
+            <span id="urbanActiveCategoryLabel">Todas las categorias</span>
+            <svg class="h-5 w-5 text-survival-300" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="urbanCategoryFilters" class="mt-3 hidden space-y-2 lg:mt-0 lg:block"></div>
+        </aside>
+
+        <div id="urbanShopGrid" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3"></div>
+      </div>
+
+      <p class="mt-8 rounded-xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-white/60">Los productos recomendados pueden incluir enlaces de afiliado. Los precios, disponibilidad y condiciones finales son los mostrados por la tienda externa en el momento de la compra.</p>
     </section>
   </main>
+
+  <script src="../../assets/js/urban-shop.js"></script>
 </body>
 </html>
-
