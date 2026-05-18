@@ -3,7 +3,7 @@ import secrets
 import sqlite3
 from pathlib import Path
 
-from flask import Flask, jsonify, request, send_from_directory, session
+from flask import Flask, jsonify, redirect, request, send_from_directory, session
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
@@ -23,8 +23,21 @@ def create_app():
     init_db()
 
     @app.get("/")
+    @app.get("/index.html")
     def home():
         return send_from_directory(BASE_DIR, "index.html")
+
+    @app.get("/equipamiento.html")
+    def legacy_equipment():
+        return redirect("/pages/equipamiento/index.html", code=301)
+
+    @app.get("/generador.html")
+    def legacy_generator():
+        return redirect("/pages/generador.html", code=301)
+
+    @app.get("/venta.html")
+    def legacy_sale():
+        return redirect("/pages/venta.html", code=301)
 
     @app.get("/assets/<path:filename>")
     def assets(filename):
