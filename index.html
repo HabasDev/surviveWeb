@@ -224,7 +224,9 @@
               <h2 class="text-3xl font-black">Consejos semanales para estar preparado</h2>
               <p class="mt-2 text-white/60">Demo publica sin backend: el formulario solo confirma la suscripcion en este navegador.</p>
               <form id="newsletterForm" class="mt-5 flex flex-col gap-3 sm:flex-row">
-                <input class="min-w-0 flex-1 rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none" type="email" placeholder="Tu correo electrónico" required />
+                <label class="sr-only" for="newsletterEmail">Correo electronico</label>
+                <input id="newsletterEmail" class="min-w-0 flex-1 rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="Tu correo electrónico" required />
+                <input class="pointer-events-none absolute -left-[9999px] h-px w-px opacity-0" type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" />
                 <button class="rounded-xl bg-survival-500 px-5 py-3 font-black text-black hover:bg-survival-300">Suscribirme gratis</button>
               </form>
             </div>

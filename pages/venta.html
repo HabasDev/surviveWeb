@@ -104,7 +104,9 @@
           <h2 class="mt-2 text-3xl font-black">Recibe futuras comparativas</h2>
           <p class="mt-3 max-w-2xl leading-7 text-white/60">Deja tu email para recibir guias, comparativas y avisos cuando haya ofertas utiles para kits de emergencia.</p>
           <form id="saleNewsletterForm" class="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]">
-            <input class="min-w-0 rounded-xl border border-white/10 bg-white px-4 py-4 text-black outline-none" type="email" placeholder="Tu correo electronico" required />
+            <label class="sr-only" for="saleNewsletterEmail">Correo electronico</label>
+            <input id="saleNewsletterEmail" class="min-w-0 rounded-xl border border-white/10 bg-white px-4 py-4 text-black outline-none" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="Tu correo electronico" required />
+            <input class="pointer-events-none absolute -left-[9999px] h-px w-px opacity-0" type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" />
             <button class="rounded-xl bg-survival-500 px-6 py-4 font-black text-black hover:bg-survival-300">Avisadme</button>
           </form>
         </div>
