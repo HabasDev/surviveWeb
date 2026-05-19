@@ -107,8 +107,43 @@
       "permanent": true
     },
     {
+      "source": "/guia/agua-embotellada-garrafas-emergencia.html",
+      "destination": "/guia/agua-embotellada-garrafas-emergencia",
+      "permanent": true
+    },
+    {
+      "source": "/guia/pastillas-potabilizadoras.html",
+      "destination": "/guia/pastillas-potabilizadoras",
+      "permanent": true
+    },
+    {
+      "source": "/guia/que-hacer-si-cortan-el-agua.html",
+      "destination": "/guia/que-hacer-si-cortan-el-agua",
+      "permanent": true
+    },
+    {
+      "source": "/guia/mochila-evacuacion.html",
+      "destination": "/guia/mochila-evacuacion",
+      "permanent": true
+    },
+    {
+      "source": "/guia/evacuar-mascotas-emergencia.html",
+      "destination": "/guia/evacuar-mascotas-emergencia",
+      "permanent": true
+    },
+    {
+      "source": "/guia/radio-emergencia.html",
+      "destination": "/guia/radio-emergencia",
+      "permanent": true
+    },
+    {
       "source": "/guia/comida-emergencia-barata.html",
       "destination": "/guia/comida-emergencia-barata",
+      "permanent": true
+    },
+    {
+      "source": "/guia/conservas-para-emergencias.html",
+      "destination": "/guia/conservas-para-emergencias",
       "permanent": true
     },
     {
@@ -153,8 +188,36 @@
       "destination": "/guia/index.html"
     },
     {
+      "source": "/guia/agua-embotellada-garrafas-emergencia",
+      "destination": "/guia/agua-embotellada-garrafas-emergencia.html"
+    },
+    {
+      "source": "/guia/pastillas-potabilizadoras",
+      "destination": "/guia/pastillas-potabilizadoras.html"
+    },
+    {
+      "source": "/guia/que-hacer-si-cortan-el-agua",
+      "destination": "/guia/que-hacer-si-cortan-el-agua.html"
+    },
+    {
+      "source": "/guia/mochila-evacuacion",
+      "destination": "/guia/mochila-evacuacion.html"
+    },
+    {
+      "source": "/guia/evacuar-mascotas-emergencia",
+      "destination": "/guia/evacuar-mascotas-emergencia.html"
+    },
+    {
+      "source": "/guia/radio-emergencia",
+      "destination": "/guia/radio-emergencia.html"
+    },
+    {
       "source": "/guia/comida-emergencia-barata",
       "destination": "/guia/comida-emergencia-barata.html"
+    },
+    {
+      "source": "/guia/conservas-para-emergencias",
+      "destination": "/guia/conservas-para-emergencias.html"
     },
     {
       "source": "/guia/prepararse-apagon-24-horas",

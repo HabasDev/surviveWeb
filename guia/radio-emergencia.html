@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio de emergencia: por qué deberías tener una</title>
+  <meta name="description" content="Guía práctica sobre radios de emergencia: para qué sirven, qué tipos existen, qué características buscar y por qué son útiles durante apagones o cortes de comunicación." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="VitaGuardia" />
+  <meta property="og:title" content="Radio de emergencia: por qué deberías tener una" />
+  <meta property="og:description" content="Guía práctica sobre radios de emergencia: para qué sirven, qué tipos existen, qué características buscar y por qué son útiles durante apagones o cortes de comunicación." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Radio de emergencia: por qué deberías tener una" />
+  <meta name="twitter:description" content="Guía práctica sobre radios de emergencia: para qué sirven, qué tipos existen, qué características buscar y por qué son útiles durante apagones o cortes de comunicación." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/vitaguardia-favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/vitaguardia-favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/favicons/vitaguardia-favicon-512.png" />
+  <meta name="theme-color" content="#050805" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { survival: { 300: '#a9ef61', 400: '#86d83d', 500: '#6fbe24', 600: '#559a17' } },
+          boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' }
+        }
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Radio de emergencia: por qué deberías tener una",
+      "description": "Guía práctica sobre radios de emergencia: para qué sirven, qué tipos existen, qué características buscar y por qué son útiles durante apagones o cortes de comunicación.",
+      "author": { "@type": "Organization", "name": "VitaGuardia" },
+      "publisher": { "@type": "Organization", "name": "VitaGuardia" },
+      "inLanguage": "es"
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        linear-gradient(rgba(134,216,61,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(134,216,61,.025) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem),
+        linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%);
+      background-size: 44px 44px, 44px 44px, auto, auto;
+    }
+    .article-hero {
+      background:
+        linear-gradient(90deg, rgba(5,8,5,.98) 0%, rgba(5,8,5,.86) 44%, rgba(5,8,5,.56) 100%),
+        url('https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=1800&q=80');
+      background-position: center;
+      background-size: cover;
+    }
+    .glass { background: rgba(12, 17, 12, .78); border: 1px solid rgba(255,255,255,.09); backdrop-filter: blur(18px); }
+    .article-body h2 { margin-top: 3rem; color: #fff; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; letter-spacing: 0; line-height: 1.05; }
+    .article-body h3 { margin-top: 1.8rem; color: #fff; font-size: 1.35rem; font-weight: 900; line-height: 1.2; }
+    .article-body p { margin-top: 1rem; color: rgba(255,255,255,.72); font-size: 1.06rem; line-height: 1.85; }
+    .article-body strong { color: #fff; }
+    .article-body a { color: #a9ef61; font-weight: 800; text-decoration: none; }
+    .article-body a:hover { color: #fff; }
+    .article-body ul,
+    .article-body ol { margin-top: 1rem; display: grid; gap: .65rem; color: rgba(255,255,255,.76); font-size: 1.02rem; line-height: 1.7; }
+    .article-body ul li { position: relative; padding-left: 1.35rem; }
+    .article-body ul li::before { content: ""; position: absolute; left: 0; top: .74rem; width: .45rem; height: .45rem; border-radius: 999px; background: #86d83d; box-shadow: 0 0 18px rgba(111,190,36,.35); }
+    .article-body ol { list-style: decimal; padding-left: 1.35rem; }
+    .quick-list li { border: 1px solid rgba(255,255,255,.1); border-radius: .9rem; background: rgba(255,255,255,.045); padding: .85rem 1rem .85rem 2.25rem; }
+    .quick-list li::before { left: 1rem; top: 1.35rem; }
+  </style>
+</head>
+<body class="min-h-screen text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+      <a href="../index.html" class="text-xl font-black tracking-tight">Vita<span style="color:#86d83d">Guardia</span></a>
+      <div class="order-3 flex w-full items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-white/70 md:order-none md:w-auto md:gap-8">
+        <a class="hover:text-white" href="../index.html">Inicio</a>
+        <a class="hover:text-white" href="../pages/generador.html">Generador</a>
+        <a class="hover:text-white" href="../pages/equipamiento/index.html">Equipamiento</a>
+        <a class="hover:text-white" href="../pages/venta.html">Mi kit</a>
+        <a class="text-white" href="index.html">Guía</a>
+      </div>
+      <a href="../pages/generador.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Crear kit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero border-b border-white/10">
+      <div class="mx-auto max-w-7xl px-5 py-16 md:py-24">
+        <div class="max-w-4xl">
+          <a href="index.html" class="mb-5 inline-flex rounded-full border border-survival-500/35 bg-survival-500/10 px-4 py-2 text-xs font-black uppercase tracking-[.22em] text-survival-300">Equipamiento</a>
+          <h1 class="text-5xl font-black leading-[.96] md:text-7xl">Radio de emergencia: por qué deberías tener una</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/72">Información fiable, bajo consumo y redundancia cuando falla la luz, internet o la red móvil. Una casa preparada también escucha.</p>
+          <div class="mt-8 flex flex-wrap gap-3 text-sm text-white/62">
+            <span class="rounded-full border border-white/10 bg-black/35 px-4 py-2">Equipamiento</span>
+            <span class="rounded-full border border-white/10 bg-black/35 px-4 py-2">Apagones</span>
+            <span class="rounded-full border border-white/10 bg-black/35 px-4 py-2">Comunicaciones</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl gap-10 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_20rem] lg:py-16">
+      <article class="article-body max-w-3xl">
+        <p>En una emergencia, la información vale casi tanto como el agua.</p>
+        <p>Si se va la luz, falla internet, la red móvil se satura o el móvil empieza a quedarse sin batería, necesitas una forma sencilla de saber qué está pasando. Ahí entra la radio de emergencia.</p>
+        <p>No es un aparato viejo para nostálgicos. Es una herramienta de comunicación pasiva: consume poca energía, puede funcionar con pilas o manivela y permite recibir información sin depender de datos móviles, WiFi ni redes sociales.</p>
+        <p>Una casa preparada no solo tiene comida, agua y linternas. También tiene una forma de escuchar.</p>
+
+        <h2 id="que-es">Qué es una radio de emergencia</h2>
+        <p>Una radio de emergencia es una radio portátil pensada para funcionar cuando los sistemas habituales fallan o no conviene gastar batería del móvil.</p>
+        <p>Puede recibir emisoras FM, AM o bandas específicas según el modelo y el país. Lo importante es que permita acceder a información útil durante cortes de luz, tormentas, emergencias locales, evacuaciones o situaciones donde internet no sea fiable.</p>
+        <p>Una radio no sustituye al móvil. Lo complementa.</p>
+        <p>El móvil sirve para comunicarte. La radio sirve para recibir información sin machacar la batería del móvil.</p>
+        <p>Esa diferencia importa.</p>
+
+        <h2 id="por-que">Por qué deberías tener una</h2>
+        <p>Durante un apagón o una emergencia, puedes encontrarte con varios problemas:</p>
+        <ul>
+          <li>El router no funciona.</li>
+          <li>La red móvil se satura.</li>
+          <li>El móvil se queda sin batería.</li>
+          <li>Las llamadas fallan.</li>
+          <li>Las redes sociales se llenan de rumores.</li>
+          <li>No sabes si el problema afecta solo a tu zona o es más amplio.</li>
+        </ul>
+        <p>Una radio te da una vía alternativa.</p>
+        <p>No necesitas estar actualizando páginas ni quemando batería. La enciendes, escuchas y decides.</p>
+        <p>En preparación civil, tener información fiable reduce errores. Y reducir errores es media victoria.</p>
+
+        <h2>La radio como parte del sistema</h2>
+        <p>La radio de emergencia no va sola.</p>
+        <p>Debe formar parte de un sistema básico:</p>
+        <ul class="quick-list sm:grid sm:grid-cols-2">
+          <li>Linterna.</li>
+          <li>Power bank.</li>
+          <li>Pilas.</li>
+          <li>Agua.</li>
+          <li>Comida.</li>
+          <li>Botiquín.</li>
+          <li>Documentos.</li>
+          <li>Radio.</li>
+          <li>Cables.</li>
+          <li>Efectivo.</li>
+        </ul>
+        <p>La radio cubre una misión concreta: información.</p>
+        <p>No cocina, no ilumina toda la casa y no carga el móvil como una estación de energía. Pero cuando necesitas saber qué ocurre, cumple.</p>
+        <p>Cada pieza del kit tiene su trabajo. La radio no es espectacular, pero es disciplinada.</p>
+
+        <h2 id="tipos">Tipos de radio de emergencia</h2>
+        <p>No todas las radios son iguales. Conviene elegir según el uso.</p>
+        <h3>Radio normal</h3>
+        <p>Una radio doméstica básica puede servir si tiene buena recepción y no depende solo del enchufe. Si necesita corriente y no tiene pilas o batería, en un apagón pierde gran parte de su utilidad.</p>
+        <h3>Radio a pilas</h3>
+        <p>Es la opción más sencilla.</p>
+        <ul>
+          <li>Fácil de usar.</li>
+          <li>Barata de mantener.</li>
+          <li>Funciona sin enchufe.</li>
+          <li>Puedes guardar pilas de repuesto.</li>
+          <li>Suele ser fiable.</li>
+        </ul>
+        <p>Puntos débiles: depende de tener pilas cargadas o nuevas, y algunas consumen más que otras. Una radio a pilas es buena base si tienes pilas almacenadas y revisadas.</p>
+        <h3>Radio recargable</h3>
+        <p>Funciona con batería interna.</p>
+        <ul>
+          <li>No necesitas pilas constantemente.</li>
+          <li>Puede cargarse por USB.</li>
+          <li>Cómoda para uso frecuente.</li>
+          <li>Útil si tienes power bank.</li>
+        </ul>
+        <p>Puntos débiles: si está descargada, dependes de poder cargarla; la batería se degrada con los años; hay que revisarla periódicamente.</p>
+        <p>Una radio recargable funciona bien si eres disciplinado con la carga. Si la guardas dos años en un cajón, igual cuando la necesites está más muerta que tu motivación un lunes.</p>
+        <h3>Radio de manivela</h3>
+        <p>Incluye una dinamo manual para generar algo de energía girando una manivela.</p>
+        <ul>
+          <li>No depende totalmente de pilas.</li>
+          <li>Puede darte uso básico en una emergencia.</li>
+          <li>Buena como respaldo.</li>
+          <li>Muy útil en kits de apagones.</li>
+        </ul>
+        <p>Puntos débiles: requiere esfuerzo, la carga generada suele ser limitada y no esperes alimentar media casa a base de muñeca. La manivela no es magia. Es respaldo.</p>
+        <h3>Radio solar</h3>
+        <p>Incluye pequeño panel solar.</p>
+        <ul>
+          <li>Puede recargarse con luz solar.</li>
+          <li>Útil en emergencias largas.</li>
+          <li>Buena como apoyo.</li>
+        </ul>
+        <p>Puntos débiles: carga lenta, depende del clima y ubicación, y no sustituye a una carga completa por USB o pilas. Úsalo como apoyo, no como doctrina principal.</p>
+        <h3>Radio multifunción</h3>
+        <p>Algunas radios incluyen linterna, carga USB, sirena, panel solar o manivela.</p>
+        <ul>
+          <li>Varias funciones en un solo equipo.</li>
+          <li>Útiles para kits compactos.</li>
+          <li>Buenas para apagones.</li>
+        </ul>
+        <p>Puntos débiles: si falla el aparato, pierdes varias funciones; a veces hacen muchas cosas regular en vez de una bien; pueden ser más voluminosas.</p>
+        <p>Una radio multifunción puede ser buena elección, pero no dependas solo de ella. Si la linterna principal también es la radio y la radio falla, tienes doble problema.</p>
+
+        <h2 id="caracteristicas">Qué características buscar</h2>
+        <p>Una buena radio de emergencia debería tener:</p>
+        <ul>
+          <li>Funcionamiento con pilas o batería.</li>
+          <li>Carga USB si es recargable.</li>
+          <li>Buena recepción.</li>
+          <li>Altavoz claro.</li>
+          <li>Toma de auriculares si quieres ahorrar energía.</li>
+          <li>Tamaño transportable.</li>
+          <li>Indicador de batería.</li>
+          <li>Construcción resistente.</li>
+          <li>Consumo bajo.</li>
+          <li>Controles simples.</li>
+          <li>Si es posible, manivela o carga solar como respaldo.</li>
+        </ul>
+        <p>La regla es sencilla: bajo estrés, lo simple gana.</p>
+        <p>Si necesitas leer un manual de 40 páginas para encender la radio, mala compra.</p>
+
+        <h2>FM, AM y otras bandas</h2>
+        <p>Para una persona normal, lo básico es que la radio reciba emisoras habituales de información.</p>
+        <p>La FM suele ser suficiente para muchas situaciones locales. La AM puede tener más alcance en algunos contextos. Algunas radios incluyen bandas adicionales, pero no siempre son necesarias para una preparación doméstica básica.</p>
+        <p>Lo importante no es tener todas las bandas del planeta. Lo importante es que, en tu zona, puedas captar emisoras útiles.</p>
+        <p>Haz una prueba en casa antes de guardarla. Busca qué emisoras se escuchan bien y apunta dos o tres.</p>
+        <p>Una radio sin probar es una incógnita con antena.</p>
+
+        <h2>Dónde guardar la radio</h2>
+        <p>Guárdala en un sitio:</p>
+        <ul>
+          <li>Accesible.</li>
+          <li>Seco.</li>
+          <li>Fácil de recordar.</li>
+          <li>Junto al kit de emergencia.</li>
+          <li>Cerca de pilas o cable de carga.</li>
+          <li>Lejos de humedad.</li>
+          <li>Con instrucciones básicas si hace falta.</li>
+        </ul>
+        <p>No la dejes perdida en un cajón random. La radio debe tener puesto fijo.</p>
+        <p>En una emergencia, buscar equipo es perder tiempo. Y perder tiempo suele generar malas decisiones.</p>
+
+        <h2>Qué guardar junto a la radio</h2>
+        <ul>
+          <li>Pilas compatibles.</li>
+          <li>Cable USB si es recargable.</li>
+          <li>Power bank.</li>
+          <li>Lista de emisoras útiles.</li>
+          <li>Libreta pequeña.</li>
+          <li>Bolígrafo.</li>
+          <li>Auriculares.</li>
+          <li>Linterna.</li>
+          <li>Instrucciones básicas.</li>
+        </ul>
+        <p>La libreta parece vieja escuela, pero sirve para apuntar horarios, avisos, teléfonos o instrucciones. Cuando todo el mundo está nervioso, escribir ayuda a ordenar.</p>
+        <p>Preparación no es solo comprar equipo. Es montar procedimiento.</p>
+
+        <h2>Cómo usar la radio durante un apagón</h2>
+        <ol>
+          <li>No gastes batería del móvil buscando rumores.</li>
+          <li>Enciende la radio.</li>
+          <li>Busca emisoras informativas.</li>
+          <li>Ajusta volumen para ahorrar energía.</li>
+          <li>Usa auriculares si quieres consumir menos.</li>
+          <li>Escucha avisos oficiales o información local.</li>
+          <li>Apunta lo importante.</li>
+          <li>Apaga la radio cuando ya tengas información útil.</li>
+        </ol>
+        <p>No hace falta tenerla encendida todo el día. La información se consulta por ventanas.</p>
+        <ul>
+          <li>Al inicio del apagón.</li>
+          <li>Cada una o dos horas si sigue.</li>
+          <li>Cuando haya cambios importantes.</li>
+          <li>Antes de tomar decisiones como salir, conducir o evacuar.</li>
+        </ul>
+        <p>Escuchar sin parar también agota. La cabeza es parte del equipo.</p>
+
+        <h2>Radio frente a móvil</h2>
+        <p>El móvil es más completo, pero más frágil.</p>
+        <p>El móvil depende de:</p>
+        <ul>
+          <li>Batería.</li>
+          <li>Cobertura.</li>
+          <li>Datos.</li>
+          <li>Red eléctrica para cargar.</li>
+          <li>Saturación de red.</li>
+          <li>Apps y servidores.</li>
+        </ul>
+        <p>La radio depende de mucho menos.</p>
+        <p>Por eso se complementan bien.</p>
+        <p>El móvil es herramienta activa: llamas, escribes, consultas.</p>
+        <p>La radio es herramienta pasiva: recibes información con poco consumo.</p>
+        <p>En un kit serio, quieres ambas.</p>
+
+        <h2>Errores comunes</h2>
+        <ul>
+          <li>Comprar una radio y no probarla.</li>
+          <li>No guardar pilas.</li>
+          <li>Guardar pilas caducadas o sulfatadas.</li>
+          <li>Dejar la radio descargada.</li>
+          <li>No saber qué emisoras sintonizar.</li>
+          <li>Depender solo del móvil.</li>
+          <li>Comprar una radio demasiado complicada.</li>
+          <li>Usarla como linterna principal y quedarte sin batería.</li>
+          <li>Guardarla lejos del kit de emergencia.</li>
+          <li>No revisarla durante años.</li>
+        </ul>
+        <p>La radio de emergencia no falla por ser mala. Muchas veces falla porque nadie la revisó.</p>
+        <p>La logística doméstica tiene poco glamour, pero evita muchos disgustos.</p>
+
+        <h2>Cada cuánto revisarla</h2>
+        <ul>
+          <li>Probarla cada pocos meses.</li>
+          <li>Comprobar pilas.</li>
+          <li>Revisar batería interna si tiene.</li>
+          <li>Cargarla si es recargable.</li>
+          <li>Comprobar que el cable sigue en el kit.</li>
+          <li>Sintonizar emisoras locales.</li>
+          <li>Revisar que la antena no esté rota.</li>
+          <li>Comprobar linterna o extras si los tiene.</li>
+        </ul>
+        <p>Hazlo junto con la revisión de power banks, linternas y comida de emergencia.</p>
+        <p>Un kit revisado es un kit real. Un kit olvidado es decoración táctica.</p>
+
+        <h2>Radio para casa, coche y mochila</h2>
+        <h3>Para casa</h3>
+        <ul>
+          <li>Mejor altavoz.</li>
+          <li>Pilas de repuesto.</li>
+          <li>Manivela o carga USB.</li>
+          <li>Buena antena.</li>
+          <li>Lista de emisoras.</li>
+        </ul>
+        <h3>Para coche</h3>
+        <ul>
+          <li>Pequeña.</li>
+          <li>Resistente.</li>
+          <li>A pilas o recargable.</li>
+          <li>Guardada con agua, manta y linterna.</li>
+        </ul>
+        <h3>Para mochila de evacuación</h3>
+        <ul>
+          <li>Radio pequeña.</li>
+          <li>Consumo bajo.</li>
+          <li>Pilas compatibles con otros equipos.</li>
+          <li>Cable corto si es recargable.</li>
+        </ul>
+        <p>Una mochila de evacuación no es un almacén. Si pesa demasiado, deja de cumplir su misión.</p>
+
+        <h2>Qué radio elegir según tu caso</h2>
+        <ul>
+          <li>Si quieres algo básico: radio a pilas sencilla.</li>
+          <li>Si quieres respaldo completo: radio recargable con manivela.</li>
+          <li>Si preparas apagones: radio con pilas, USB y buena autonomía.</li>
+          <li>Si preparas mochila: radio compacta y ligera.</li>
+          <li>Si sois varios en casa: una radio principal y, si puedes, una pequeña de respaldo.</li>
+        </ul>
+        <p>No necesitas el aparato más llamativo. Necesitas uno que funcione cuando toque.</p>
+
+        <h2>Conclusión</h2>
+        <p>Una radio de emergencia es una pieza pequeña, pero estratégica.</p>
+        <p>Cuando falla la luz, internet o la cobertura, te permite recibir información sin depender completamente del móvil. Te ayuda a saber qué pasa, evitar rumores y tomar mejores decisiones.</p>
+        <p>No sustituye al resto del kit. Lo completa.</p>
+        <p>Agua, comida, luz, energía y comunicación. Ese es el núcleo.</p>
+        <p>Una casa preparada no solo aguanta. Escucha.</p>
+        <p>Radio lista, pilas listas, información bajo control.</p>
+
+        <div class="mt-12 rounded-[1.5rem] border border-survival-500/25 bg-survival-500/10 p-6 md:p-8">
+          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Siguiente paso</p>
+          <h2 class="mt-3 text-3xl font-black md:text-4xl">Radio, linterna, power bank, agua y comida</h2>
+          <p class="mt-4 text-white/70">En una emergencia, quien conserva información conserva margen de maniobra. Completa esta guía con <a href="prepararse-apagon-24-horas.html">apagón de 24 horas</a>, <a href="prepararse-apagon-varios-dias.html">apagón de varios días</a>, <a href="mochila-evacuacion.html">mochila de evacuación</a> y <a href="agua-embotellada-garrafas-emergencia.html">agua para emergencias</a>.</p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="../pages/equipamiento/supervivencia-casa.html" class="rounded-xl bg-survival-500 px-5 py-4 text-center font-black text-black shadow-glow hover:bg-survival-300">Ver equipamiento</a>
+            <a href="../pages/generador.html" class="rounded-xl border border-white/15 px-5 py-4 text-center font-black text-white/80 hover:bg-white/10">Generar mi kit</a>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-[1.5rem] border border-white/10 bg-white/[.04] p-6 text-sm leading-7 text-white/58">
+          <p class="font-black text-white">Fuentes oficiales consultadas</p>
+          <p>Esta guía se apoya en recomendaciones públicas de <a href="https://www.ready.gov/sites/default/files/2022-04/ready_checklist.pdf" target="_blank" rel="noopener">Ready.gov sobre kit básico</a>, <a href="https://www.fema.gov/he/print/pdf/node/329749" target="_blank" rel="noopener">FEMA sobre radio a pilas o manivela</a> y <a href="https://www.cdc.gov/prepare-your-health/take-action/power-sources.html" target="_blank" rel="noopener">CDC sobre fuentes de energía en emergencia</a>.</p>
+        </div>
+      </article>
+
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <div class="glass rounded-[1.5rem] p-5">
+          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Resumen</p>
+          <h2 class="mt-3 text-2xl font-black">Comunicaciones</h2>
+          <div class="mt-5 grid gap-3 text-sm text-white/70">
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="#que-es">Qué es</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="#por-que">Por qué tener una</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="#tipos">Tipos de radio</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="#caracteristicas">Características</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="prepararse-apagon-varios-dias.html">Apagón largo</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="mochila-evacuacion.html">Mochila</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="../assets/js/site-footer.js?v=8"></script>
+</body>
+</html>

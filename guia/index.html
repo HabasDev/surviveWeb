@@ -38,8 +38,43 @@
       "hasPart": [
         {
           "@type": "Article",
+          "headline": "Agua embotellada o garrafas: qué conviene más para emergencias",
+          "url": "/guia/agua-embotellada-garrafas-emergencia"
+        },
+        {
+          "@type": "Article",
+          "headline": "Pastillas potabilizadoras: qué son y cuándo usarlas",
+          "url": "/guia/pastillas-potabilizadoras"
+        },
+        {
+          "@type": "Article",
+          "headline": "Qué hacer si cortan el agua en casa",
+          "url": "/guia/que-hacer-si-cortan-el-agua"
+        },
+        {
+          "@type": "Article",
+          "headline": "Mochila de evacuación: qué llevar sí o sí",
+          "url": "/guia/mochila-evacuacion"
+        },
+        {
+          "@type": "Article",
+          "headline": "Cómo evacuar con mascotas en una emergencia",
+          "url": "/guia/evacuar-mascotas-emergencia"
+        },
+        {
+          "@type": "Article",
+          "headline": "Radio de emergencia: por qué deberías tener una",
+          "url": "/guia/radio-emergencia"
+        },
+        {
+          "@type": "Article",
           "headline": "Comida de emergencia barata: lista básica para empezar",
           "url": "/guia/comida-emergencia-barata"
+        },
+        {
+          "@type": "Article",
+          "headline": "Mejores conservas para una emergencia",
+          "url": "/guia/conservas-para-emergencias"
         },
         {
           "@type": "Article",
@@ -189,19 +224,91 @@
       </div>
 
       <div class="guide-panel mb-7 rounded-[1.25rem] p-3">
-        <div class="flex gap-2 overflow-x-auto pb-1" aria-label="Filtrar guías por categoría">
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="todo" aria-pressed="true">Todo</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="apagones" aria-pressed="false">Apagones</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="comida" aria-pressed="false">Comida</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="agua" aria-pressed="false">Agua</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="evacuacion" aria-pressed="false">Evacuación</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="equipamiento" aria-pressed="false">Equipamiento</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="seguridad" aria-pressed="false">Seguridad</button>
-          <button class="guide-filter shrink-0 rounded-xl px-4 py-3 text-sm font-black" type="button" data-guide-filter="primeros-auxilios" aria-pressed="false">Primeros auxilios</button>
+        <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4" aria-label="Filtrar guías por categoría">
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="todo" aria-pressed="true">Todo</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="apagones" aria-pressed="false">Apagones</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="comida" aria-pressed="false">Comida</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="agua" aria-pressed="false">Agua</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="evacuacion" aria-pressed="false">Evacuación</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="equipamiento" aria-pressed="false">Equipamiento</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="seguridad" aria-pressed="false">Seguridad</button>
+          <button class="guide-filter min-h-12 rounded-xl px-3 py-3 text-sm font-black" type="button" data-guide-filter="primeros-auxilios" aria-pressed="false">Primeros auxilios</button>
         </div>
       </div>
 
       <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3" id="guideGrid">
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="agua apagones">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.2 6 11a6 6 0 0 1-12 0c0-4.8 6-11 6-11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 14a3 3 0 0 0 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Agua / Apagones</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Agua embotellada o garrafas: qué conviene más para emergencias</h2>
+            <p class="mt-4 leading-7 text-white/64">Cómo combinar garrafas y botellas pequeñas para tener volumen, movilidad y rotación realista en casa.</p>
+            <a href="agua-embotellada-garrafas-emergencia.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="agua equipamiento">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6v4l3 3v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9l3-3V3ZM9 7h6M8 13h8M10 17h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Agua / Equipamiento</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Pastillas potabilizadoras: qué son y cuándo usarlas</h2>
+            <p class="mt-4 leading-7 text-white/64">Cuándo sirven, cuándo no, cómo usarlas con seguridad y cómo integrarlas en un kit de agua sin improvisar.</p>
+            <a href="pastillas-potabilizadoras.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="agua seguridad">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M7 5h10v14H7V5ZM9 8h6M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Agua / Emergencia doméstica</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Qué hacer si cortan el agua en casa</h2>
+            <p class="mt-4 leading-7 text-white/64">Cómo confirmar la incidencia, proteger reservas, ahorrar agua y mantener higiene básica durante un corte de suministro.</p>
+            <a href="que-hacer-si-cortan-el-agua.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="evacuacion equipamiento">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 7V5a4 4 0 0 1 8 0v2M6 8h12l1 13H5L6 8ZM9 12v2M15 12v2M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Evacuación / Equipamiento</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Mochila de evacuación: qué llevar sí o sí</h2>
+            <p class="mt-4 leading-7 text-white/64">Qué meter, qué dejar fuera y cómo preparar una mochila que puedas transportar caminando sin convertirla en lastre.</p>
+            <a href="mochila-evacuacion.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="evacuacion equipamiento">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12c2-4 5-6 7-2 2-4 5-2 7 2M7 14c0 4 3 6 5 6s5-2 5-6M9 8h.01M15 8h.01M10 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Evacuación / Mascotas</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Cómo evacuar con mascotas en una emergencia</h2>
+            <p class="mt-4 leading-7 text-white/64">Transportín, agua, comida, documentación, medicación y destino previsto para proteger a los animales sin improvisar.</p>
+            <a href="evacuar-mascotas-emergencia.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="equipamiento apagones">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 8h10a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3ZM8 8V5M16 8V5M8 14h.01M12 14h4M17 12v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Equipamiento / Apagones</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Radio de emergencia: por qué deberías tener una</h2>
+            <p class="mt-4 leading-7 text-white/64">Para qué sirve, tipos de radio, qué características buscar y cómo usarla cuando falla la luz o la comunicación móvil.</p>
+            <a href="radio-emergencia.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
         <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="comida">
           <div class="relative z-10">
             <div class="guide-icon" aria-hidden="true">
@@ -211,6 +318,18 @@
             <h2 class="mt-5 text-3xl font-black leading-tight">Comida de emergencia barata: lista básica para empezar</h2>
             <p class="mt-4 leading-7 text-white/64">Lista económica para montar una despensa de 24, 48 o 72 horas con alimentos normales, útiles y fáciles de rotar.</p>
             <a href="comida-emergencia-barata.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
+          </div>
+        </article>
+
+        <article class="guide-card rounded-[1.5rem] p-6 md:p-7" data-guide-category="comida apagones equipamiento">
+          <div class="relative z-10">
+            <div class="guide-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 4h10M8 4l1 4h6l1-4M8 8h8l-1 12H9L8 8ZM10 12h4M10 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="mt-5 w-fit rounded-full border border-survival-500/30 bg-survival-500/10 px-3 py-1 text-xs font-black uppercase tracking-[.16em] text-survival-300">Comida / Equipamiento</p>
+            <h2 class="mt-5 text-3xl font-black leading-tight">Mejores conservas para una emergencia</h2>
+            <p class="mt-4 leading-7 text-white/64">Qué conservas comprar, cómo combinarlas y cómo organizar una despensa de emergencia con criterio de intendencia doméstica.</p>
+            <a href="conservas-para-emergencias.html" class="mt-6 inline-flex rounded-xl bg-survival-500 px-5 py-3 font-black text-black shadow-glow hover:bg-survival-300">Leer guía</a>
           </div>
         </article>
 
