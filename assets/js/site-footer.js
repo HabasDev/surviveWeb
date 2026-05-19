@@ -38,7 +38,7 @@
               <a href="/pages/generador.html">Generador</a>
               <a href="/pages/equipamiento/index.html">Equipamiento</a>
               <a href="/pages/venta.html">Mi kit</a>
-              <a href="/index.html#newsletter">Recursos</a>
+              <a href="/guia/">Gu&iacute;a</a>
             </div>
           </div>
 

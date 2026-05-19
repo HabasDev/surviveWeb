@@ -14,7 +14,7 @@ const URBAN_SHOP_CATEGORIES = [
   { id: 'comida', label: 'Comida compacta' }
 ];
 
-// Cambia aqui los enlaces por tus enlaces reales o de afiliado.
+// Cambia aqui los enlaces por tus enlaces reales, afiliados o tienda propia.
 const URBAN_SHOP_PRODUCTS = [
   { id: 'mochila-antirrobo', categoria: 'mochila', nombre: 'smallrun Mochila Enrollable Impermeable Antirrobo para Portatil 15', proveedor: 'Amazon', tierLabel: 'Mejor relacion calidad-precio', enlace: 'https://www.amazon.es/dp/B0GVPM5CZF?tag=vitaguardia02-21', descripcion: 'Mochila discreta para EDC, documentos, agua y energia movil.' },
   { id: 'organizador-edc', categoria: 'mochila', nombre: 'Sayram SP6 - Organizador EDC Compacto de Lona Encerada', proveedor: 'Amazon', tierLabel: 'Opcion basica', enlace: 'https://www.amazon.es/dp/B0CRRGLHYD?tag=vitaguardia02-21', descripcion: 'Ordena cables, botiquin pequeno, libreta, linterna y accesorios.' },
@@ -98,6 +98,15 @@ const URBAN_SHOP_PRODUCTS = [
     `;
   }
 
+  function renderProductLink(product) {
+    const hasLink = product.enlace && !product.enlace.startsWith('ENLACE_');
+    if (!hasLink) {
+      return '';
+    }
+
+    return `<a class="rounded-xl border border-white/15 px-4 py-3 text-sm font-black text-white/75 hover:bg-white/10" href="${product.enlace}" target="_blank" rel="nofollow sponsored noopener">Ver producto</a>`;
+  }
+
   function renderFilters() {
     filters.innerHTML = URBAN_SHOP_CATEGORIES.map((category) => `
       <button class="${category.id === activeCategory ? 'border-survival-500 bg-survival-500 text-black' : 'border-white/10 bg-white/5 text-white/70 hover:border-survival-500/40 hover:bg-white/10 hover:text-white'} flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left text-sm font-black transition" type="button" data-category="${category.id}">
@@ -121,7 +130,6 @@ const URBAN_SHOP_PRODUCTS = [
         ${window.getProductVisual ? window.getProductVisual(product) : ''}
         <div class="mb-4 mt-4 flex items-start justify-between gap-3">
           <span class="rounded-full bg-survival-500/15 px-3 py-1 text-xs font-black uppercase tracking-[.14em] text-survival-300">${product.tierLabel}</span>
-          <span class="text-sm font-bold text-white/45">${product.proveedor}</span>
         </div>
         <h3 class="text-2xl font-black leading-tight text-white">${product.nombre}</h3>
         <p class="mt-3 flex-1 text-sm leading-6 text-white/60">${product.descripcion}</p>
@@ -129,7 +137,7 @@ const URBAN_SHOP_PRODUCTS = [
           <p class="text-sm font-bold text-white/45">${product.tierLabel}</p>
           <div class="flex flex-wrap gap-2">
             ${renderKitButton(product)}
-            <a class="rounded-xl border border-white/15 px-4 py-3 text-sm font-black text-white/75 hover:bg-white/10" href="${product.enlace}" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon</a>
+            ${renderProductLink(product)}
           </div>
         </div>
       </article>

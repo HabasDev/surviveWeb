@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo conservar comida durante un apagón</title>
+  <meta name="description" content="Aprende cómo conservar los alimentos si se va la luz, cuánto aguanta la nevera sin electricidad y qué hacer con la comida después de un apagón." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="VitaGuardia" />
+  <meta property="og:title" content="Cómo conservar comida durante un apagón" />
+  <meta property="og:description" content="Aprende cómo conservar los alimentos si se va la luz, cuánto aguanta la nevera sin electricidad y qué hacer con la comida después de un apagón." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo conservar comida durante un apagón" />
+  <meta name="twitter:description" content="Aprende cómo conservar los alimentos si se va la luz, cuánto aguanta la nevera sin electricidad y qué hacer con la comida después de un apagón." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/vitaguardia-favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/vitaguardia-favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="../assets/favicons/vitaguardia-favicon-512.png" />
+  <meta name="theme-color" content="#050805" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { survival: { 300: '#a9ef61', 400: '#86d83d', 500: '#6fbe24', 600: '#559a17' } },
+          boxShadow: { glow: '0 0 35px rgba(111, 190, 36, 0.22)' }
+        }
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo conservar comida durante un apagón",
+      "description": "Aprende cómo conservar los alimentos si se va la luz, cuánto aguanta la nevera sin electricidad y qué hacer con la comida después de un apagón.",
+      "author": { "@type": "Organization", "name": "VitaGuardia" },
+      "publisher": { "@type": "Organization", "name": "VitaGuardia" },
+      "inLanguage": "es"
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(111,190,36,.16), transparent 32rem),
+        linear-gradient(180deg, #050805 0%, #0b100b 45%, #050805 100%);
+    }
+    .article-hero {
+      background:
+        linear-gradient(90deg, rgba(5,8,5,.96) 0%, rgba(5,8,5,.84) 44%, rgba(5,8,5,.5) 100%),
+        url('https://images.unsplash.com/photo-1506368249639-73a05d6f6488?auto=format&fit=crop&w=1800&q=80');
+      background-position: center;
+      background-size: cover;
+    }
+    .glass {
+      background: rgba(12, 17, 12, .78);
+      border: 1px solid rgba(255,255,255,.09);
+      backdrop-filter: blur(18px);
+    }
+    .article-body h2 {
+      margin-top: 3rem;
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: 0;
+      line-height: 1.05;
+    }
+    .article-body p {
+      margin-top: 1rem;
+      color: rgba(255,255,255,.72);
+      font-size: 1.06rem;
+      line-height: 1.85;
+    }
+    .article-body a {
+      color: #a9ef61;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .article-body a:hover { color: #fff; }
+    .article-body ul,
+    .article-body ol {
+      margin-top: 1rem;
+      display: grid;
+      gap: .65rem;
+      color: rgba(255,255,255,.76);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+    .article-body ul li {
+      position: relative;
+      padding-left: 1.35rem;
+    }
+    .article-body ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .74rem;
+      width: .45rem;
+      height: .45rem;
+      border-radius: 999px;
+      background: #86d83d;
+      box-shadow: 0 0 18px rgba(111,190,36,.35);
+    }
+    .article-body ol {
+      list-style: decimal;
+      padding-left: 1.35rem;
+    }
+    .quick-list li {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: .9rem;
+      background: rgba(255,255,255,.045);
+      padding: .85rem 1rem .85rem 2.25rem;
+    }
+    .quick-list li::before {
+      left: 1rem;
+      top: 1.35rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+      <a href="../index.html" class="text-xl font-black tracking-tight">Vita<span style="color:#86d83d">Guardia</span></a>
+      <div class="order-3 flex w-full items-center gap-4 overflow-x-auto whitespace-nowrap text-sm text-white/70 md:order-none md:w-auto md:gap-8">
+        <a class="hover:text-white" href="../index.html">Inicio</a>
+        <a class="hover:text-white" href="../pages/generador.html">Generador</a>
+        <a class="hover:text-white" href="../pages/equipamiento/index.html">Equipamiento</a>
+        <a class="hover:text-white" href="../pages/venta.html">Mi kit</a>
+        <a class="text-white" href="index.html">Guía</a>
+      </div>
+      <a href="../pages/generador.html" class="rounded-xl bg-survival-500 px-4 py-2 text-sm font-black text-black shadow-glow hover:bg-survival-300">Crear kit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero border-b border-white/10">
+      <div class="mx-auto max-w-7xl px-5 py-16 md:py-24">
+        <div class="max-w-4xl">
+          <a href="index.html" class="mb-5 inline-flex rounded-full border border-survival-500/35 bg-survival-500/10 px-4 py-2 text-xs font-black uppercase tracking-[.22em] text-survival-300">Guía VitaGuardia</a>
+          <h1 class="text-5xl font-black leading-[.96] md:text-7xl">Cómo conservar comida durante un apagón</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/72">Qué hacer con la nevera, el congelador y los alimentos cuando se va la luz en casa.</p>
+          <div class="mt-8 flex flex-wrap gap-3 text-sm text-white/62">
+            <span class="rounded-full border border-white/10 bg-black/35 px-4 py-2">Comida</span>
+            <span class="rounded-full border border-white/10 bg-black/35 px-4 py-2">Apagones</span>
+            <span class="rounded-full border border-white/10 bg-black/35 px-4 py-2">Hogar preparado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl gap-10 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_20rem] lg:py-16">
+      <article class="article-body max-w-3xl">
+        <p>Un apagón no solo afecta a la luz o al móvil. También puede poner en riesgo la comida que tienes en la nevera y el congelador.</p>
+        <p>La buena noticia es que, si actúas con cabeza, puedes conservar mejor los alimentos y evitar tirar comida innecesariamente. La clave está en abrir poco la nevera, mantener el frío el máximo tiempo posible y saber qué alimentos revisar cuando vuelva la electricidad.</p>
+
+        <h2 id="cuanto-aguanta-la-comida-sin-luz">Cuánto aguanta la comida sin luz</h2>
+        <p>La nevera puede mantener el frío durante unas horas si no se abre constantemente. El congelador aguanta más tiempo, sobre todo si está lleno.</p>
+        <p>Como norma práctica:</p>
+        <ul>
+          <li>La nevera conserva mejor el frío si permanece cerrada.</li>
+          <li>El congelador lleno mantiene la temperatura durante más tiempo que uno medio vacío.</li>
+          <li>Cada vez que abres la puerta, pierdes frío.</li>
+          <li>Si tienes dudas sobre un alimento, es mejor no arriesgar.</li>
+        </ul>
+
+        <h2>Qué hacer durante el apagón</h2>
+        <p>Durante un corte de luz, lo más importante es no abrir la nevera por costumbre.</p>
+        <p>Sigue estos consejos:</p>
+        <ul>
+          <li>Abre la nevera solo cuando sea imprescindible.</li>
+          <li>Decide antes qué vas a coger.</li>
+          <li>Cierra la puerta lo antes posible.</li>
+          <li>Agrupa alimentos fríos para conservar mejor la temperatura.</li>
+          <li>No metas comida caliente dentro.</li>
+          <li>Consume antes los productos más delicados.</li>
+        </ul>
+        <p>Los alimentos frescos como carne, pescado, lácteos abiertos o comida cocinada son los que más cuidado requieren.</p>
+
+        <h2>Qué alimentos consumir primero</h2>
+        <p>Si el apagón se alarga, conviene priorizar los alimentos que se estropean antes.</p>
+        <p>Orden recomendado:</p>
+        <ol>
+          <li>Comida cocinada que estaba en la nevera.</li>
+          <li>Carne y pescado fresco.</li>
+          <li>Lácteos abiertos.</li>
+          <li>Embutidos y productos refrigerados.</li>
+          <li>Fruta y verdura fresca.</li>
+          <li>Conservas y alimentos secos.</li>
+        </ol>
+        <p>Las conservas, frutos secos, barritas, pan tostado, leche UHT y comida en lata son mejores opciones para un apagón porque no dependen de la nevera.</p>
+
+        <h2>Cómo proteger el congelador</h2>
+        <p>El congelador debe abrirse lo mínimo posible.</p>
+        <p>Si tienes bolsas de hielo, acumuladores de frío o botellas congeladas, pueden ayudar a mantener la temperatura durante más tiempo.</p>
+        <p>También es buena idea tener el congelador ordenado por zonas para encontrar rápido lo que necesitas sin dejar la puerta abierta demasiado tiempo.</p>
+
+        <h2>Qué hacer cuando vuelve la luz</h2>
+        <p>Cuando vuelva la electricidad, no guardes todo automáticamente como si nada hubiera pasado.</p>
+        <p>Revisa:</p>
+        <ul>
+          <li>Olor.</li>
+          <li>Textura.</li>
+          <li>Temperatura.</li>
+          <li>Si hay líquidos extraños.</li>
+          <li>Si los alimentos se han descongelado completamente.</li>
+        </ul>
+        <p>Si un producto huele mal, tiene textura rara o tienes dudas claras sobre su estado, no lo consumas.</p>
+        <p>Con la comida en mal estado no se negocia. Tirar algo duele, pero una intoxicación alimentaria duele bastante más.</p>
+
+        <h2>Alimentos recomendados para tener en casa</h2>
+        <p>Para estar preparado ante apagones, conviene tener una pequeña reserva de alimentos que no dependan de la nevera:</p>
+        <ul class="quick-list sm:grid sm:grid-cols-2">
+          <li>Conservas de pescado</li>
+          <li>Conservas de legumbres</li>
+          <li>Frutos secos</li>
+          <li>Barritas energéticas</li>
+          <li>Pan tostado</li>
+          <li>Crackers</li>
+          <li>Leche UHT</li>
+          <li>Crema de cacahuete</li>
+          <li>Comida preparada en lata</li>
+          <li>Agua embotellada</li>
+        </ul>
+        <p>No hace falta llenar un trastero entero. Basta con tener una reserva sencilla y bien pensada para 24 o 48 horas.</p>
+
+        <h2>Conclusión</h2>
+        <p>Conservar comida durante un apagón depende sobre todo de una cosa: no perder el frío antes de tiempo.</p>
+        <p>Mantén la nevera y el congelador cerrados, consume primero los alimentos más delicados y ten siempre comida no refrigerada para emergencias.</p>
+        <p>Prepararse no es exagerar. Es evitar problemas cuando algo tan básico como la electricidad deja de funcionar.</p>
+        <p>Para completar la preparación, revisa también <a href="comida-emergencia-barata.html">cómo montar comida de emergencia barata</a>, <a href="cuanto-aguanta-nevera-sin-luz.html">cuánto aguanta la nevera sin electricidad</a>, <a href="prepararse-apagon-24-horas.html">cómo prepararte para un apagón de 24 horas</a> y <a href="evacuar-casa-emergencia.html">qué hacer si tienes que evacuar tu casa</a>.</p>
+
+        <div class="mt-12 rounded-[1.5rem] border border-survival-500/25 bg-survival-500/10 p-6 md:p-8">
+          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Siguiente paso</p>
+          <h2 class="mt-3 text-3xl font-black md:text-4xl">Ten comida útil antes de necesitarla</h2>
+          <p class="mt-4 text-white/70">El equipamiento para casa agrupa artículos útiles para apagones: comida sencilla, agua, linternas, baterías externas, radio y botiquín.</p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="../pages/equipamiento/supervivencia-casa.html" class="rounded-xl bg-survival-500 px-5 py-4 text-center font-black text-black shadow-glow hover:bg-survival-300">Ver productos para casa</a>
+            <a href="../pages/generador.html" class="rounded-xl border border-white/15 px-5 py-4 text-center font-black text-white/80 hover:bg-white/10">Generar mi kit</a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <div class="glass rounded-[1.5rem] p-5">
+          <p class="text-xs font-black uppercase tracking-[.22em] text-survival-300">Resumen</p>
+          <h2 class="mt-3 text-2xl font-black">Lo esencial</h2>
+          <div class="mt-5 grid gap-3 text-sm text-white/70">
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="#cuanto-aguanta-la-comida-sin-luz">Cuánto aguanta la comida</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="comida-emergencia-barata.html">Comida barata</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="prepararse-apagon-24-horas.html">Guía apagón 24 horas</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="cuanto-aguanta-nevera-sin-luz.html">Nevera sin luz</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="evacuar-casa-emergencia.html">Evacuación de vivienda</a>
+            <a class="rounded-xl border border-white/10 bg-white/5 p-4 hover:border-survival-500/45 hover:text-white" href="../pages/equipamiento/supervivencia-casa.html">Equipamiento para casa</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="../assets/js/site-footer.js?v=8"></script>
+</body>
+</html>

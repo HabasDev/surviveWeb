@@ -100,9 +100,82 @@
       "source": "/venta",
       "destination": "/pages/venta",
       "permanent": true
+    },
+    {
+      "source": "/guia/index.html",
+      "destination": "/guia",
+      "permanent": true
+    },
+    {
+      "source": "/guia/comida-emergencia-barata.html",
+      "destination": "/guia/comida-emergencia-barata",
+      "permanent": true
+    },
+    {
+      "source": "/guia/prepararse-apagon-24-horas.html",
+      "destination": "/guia/prepararse-apagon-24-horas",
+      "permanent": true
+    },
+    {
+      "source": "/guia/conservar-comida-durante-apagon.html",
+      "destination": "/guia/conservar-comida-durante-apagon",
+      "permanent": true
+    },
+    {
+      "source": "/guia/prepararse-apagon-varios-dias.html",
+      "destination": "/guia/prepararse-apagon-varios-dias",
+      "permanent": true
+    },
+    {
+      "source": "/guia/cuanto-aguanta-nevera-sin-luz.html",
+      "destination": "/guia/cuanto-aguanta-nevera-sin-luz",
+      "permanent": true
+    },
+    {
+      "source": "/guia/evacuar-casa-emergencia.html",
+      "destination": "/guia/evacuar-casa-emergencia",
+      "permanent": true
+    },
+    {
+      "source": "/apagones/prepararse-apagon-24-horas",
+      "destination": "/guia/prepararse-apagon-24-horas",
+      "permanent": true
+    },
+    {
+      "source": "/apagones/prepararse-apagon-24-horas.html",
+      "destination": "/guia/prepararse-apagon-24-horas",
+      "permanent": true
     }
   ],
   "rewrites": [
+    {
+      "source": "/guia",
+      "destination": "/guia/index.html"
+    },
+    {
+      "source": "/guia/comida-emergencia-barata",
+      "destination": "/guia/comida-emergencia-barata.html"
+    },
+    {
+      "source": "/guia/prepararse-apagon-24-horas",
+      "destination": "/guia/prepararse-apagon-24-horas.html"
+    },
+    {
+      "source": "/guia/conservar-comida-durante-apagon",
+      "destination": "/guia/conservar-comida-durante-apagon.html"
+    },
+    {
+      "source": "/guia/prepararse-apagon-varios-dias",
+      "destination": "/guia/prepararse-apagon-varios-dias.html"
+    },
+    {
+      "source": "/guia/cuanto-aguanta-nevera-sin-luz",
+      "destination": "/guia/cuanto-aguanta-nevera-sin-luz.html"
+    },
+    {
+      "source": "/guia/evacuar-casa-emergencia",
+      "destination": "/guia/evacuar-casa-emergencia.html"
+    },
     {
       "source": "/equipamiento/:path*",
       "destination": "/pages/equipamiento/:path*"
