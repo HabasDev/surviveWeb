@@ -125,7 +125,7 @@
     if (isBotLikeSubmission(form)) {
       startCooldown();
       form.reset();
-      setStatus(form, 'Guardado en demo.', 'success');
+      setStatus(form, 'Solicitud registrada.', 'success');
       return;
     }
 
@@ -139,13 +139,13 @@
     }
 
     if (!saveSubscriber(email, form.id || 'web')) {
-      setStatus(form, 'No se pudo guardar en este navegador. Revisa la privacidad o el almacenamiento local.', 'error');
+      setStatus(form, 'No se pudo registrar ahora. Revisa la privacidad o el almacenamiento local.', 'error');
       return;
     }
 
     form.reset();
     startCooldown();
-    setStatus(form, 'Guardado en demo. Puedes volver a intentarlo dentro de 60 segundos.', 'success');
+    setStatus(form, 'Solicitud registrada. Puedes volver a intentarlo dentro de 60 segundos.', 'success');
   }
 
   forms.forEach((form) => {

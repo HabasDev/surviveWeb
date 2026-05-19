@@ -57,6 +57,93 @@
       background-size: cover;
       background-position: center;
     }
+    .vg-select-wrap {
+      position: relative;
+    }
+    .vg-select-wrap::after {
+      content: "";
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      width: .62rem;
+      height: .62rem;
+      border-right: 2px solid #86d83d;
+      border-bottom: 2px solid #86d83d;
+      pointer-events: none;
+      transform: translateY(-68%) rotate(45deg);
+    }
+    .vg-select {
+      width: 100%;
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: .9rem;
+      background:
+        linear-gradient(135deg, rgba(134,216,61,.12), transparent 42%),
+        rgba(5, 8, 5, .82);
+      color: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+      outline: none;
+      padding: .95rem 3rem .95rem 1rem;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .vg-select:hover {
+      border-color: rgba(134,216,61,.45);
+      background:
+        linear-gradient(135deg, rgba(134,216,61,.18), transparent 42%),
+        rgba(8, 13, 8, .9);
+    }
+    .vg-select:focus {
+      border-color: #86d83d;
+      box-shadow: 0 0 0 3px rgba(134,216,61,.16), inset 0 1px 0 rgba(255,255,255,.08);
+    }
+    .vg-select option {
+      background: #0b100b;
+      color: #fff;
+    }
+    .store-entry {
+      position: relative;
+      min-height: 28rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 1.5rem;
+      background-size: cover;
+      background-position: center;
+      transition: transform .25s ease, border-color .25s ease, background-position .25s ease;
+    }
+    .store-entry::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(5,8,5,.12), rgba(5,8,5,.62) 45%, rgba(5,8,5,.95)),
+        linear-gradient(90deg, rgba(5,8,5,.78), transparent 70%);
+    }
+    .store-entry:hover {
+      border-color: rgba(134,216,61,.55);
+      transform: translateY(-4px);
+      background-position: center 42%;
+    }
+    .store-entry__content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 28rem;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+    }
+    .store-entry__tag {
+      width: fit-content;
+      border-radius: 999px;
+      background: rgba(111,190,36,.16);
+      border: 1px solid rgba(134,216,61,.32);
+      padding: .35rem .7rem;
+      color: #a9ef61;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body class="min-h-screen text-white antialiased">
@@ -135,34 +222,42 @@
             </div>
 
             <label class="block text-sm font-bold text-white/80" for="people">¿Cuántas personas viven en tu hogar?</label>
-            <select id="people" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="1">1 persona</option>
-              <option value="2" selected>2 personas</option>
-              <option value="3">3 personas</option>
-              <option value="4">4 personas</option>
-              <option value="5">5 o más</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="people" class="vg-select">
+                <option value="1">1 persona</option>
+                <option value="2" selected>2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 o más</option>
+              </select>
+            </div>
 
             <label class="mt-5 block text-sm font-bold text-white/80" for="pets">¿Tienes mascotas?</label>
-            <select id="pets" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="no" selected>No</option>
-              <option value="yes">Sí</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="pets" class="vg-select">
+                <option value="no" selected>No</option>
+                <option value="yes">Sí</option>
+              </select>
+            </div>
 
             <label class="mt-5 block text-sm font-bold text-white/80" for="zone">¿Dónde vives?</label>
-            <select id="zone" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="city">Ciudad</option>
-              <option value="town">Pueblo</option>
-              <option value="rural">Zona rural</option>
-              <option value="coast">Costa</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="zone" class="vg-select">
+                <option value="city">Ciudad</option>
+                <option value="town">Pueblo</option>
+                <option value="rural">Zona rural</option>
+                <option value="coast">Costa</option>
+              </select>
+            </div>
 
             <label class="mt-5 block text-sm font-bold text-white/80" for="budget">Presupuesto aproximado</label>
-            <select id="budget" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="basic">Basico: lo imprescindible</option>
-              <option value="medium" selected>Equilibrado: mejor relacion calidad-precio</option>
-              <option value="pro">Completo: preparacion avanzada</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="budget" class="vg-select">
+                <option value="basic">Basico: lo imprescindible</option>
+                <option value="medium" selected>Equilibrado: mejor relacion calidad-precio</option>
+                <option value="pro">Completo: preparacion avanzada</option>
+              </select>
+            </div>
 
             <button class="mt-6 w-full rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Generar mi kit</button>
           </form>
@@ -184,64 +279,80 @@
     <section id="recomendado" class="mx-auto max-w-7xl px-5 pb-24">
       <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
-          <p class="mb-3 text-xs font-black uppercase tracking-[.24em] text-survival-400">Lo esencial para empezar</p>
-          <h2 class="text-4xl font-black tracking-tight">Equipamiento recomendado</h2>
-          <p class="mt-3 text-white/60">Categorías base para futuras comparativas y enlaces de afiliación.</p>
+          <p class="mb-3 text-xs font-black uppercase tracking-[.24em] text-survival-400">Tiendas VitaGuardia</p>
+          <h2 class="text-4xl font-black tracking-tight">Equipamiento por escenario</h2>
+          <p class="mt-3 max-w-2xl text-white/60">Entra directamente en la tienda que encaja con tu situacion: hogar, ciudad, servicio profesional o equipo personal de campo.</p>
         </div>
-        <a href="pages/equipamiento/index.html" class="w-fit rounded-xl border border-white/15 px-5 py-3 font-bold text-white/75 hover:bg-white/10">Ver comparativas</a>
+        <a href="pages/equipamiento/index.html" class="w-fit rounded-xl border border-white/15 px-5 py-3 font-bold text-white/75 hover:bg-white/10">Ver todas</a>
       </div>
 
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1478827387698-1527781a4887?auto=format&fit=crop&w=700&q=80" alt="Linterna de emergencia" />
-          <div class="p-5"><h3 class="font-black">Linternas</h3><p class="mt-2 text-sm text-white/50">Opcion basica</p></div>
-        </article>
-        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=700&q=80" alt="Agua en naturaleza" />
-          <div class="p-5"><h3 class="font-black">Filtros de agua</h3><p class="mt-2 text-sm text-white/50">Mejor relacion calidad-precio</p></div>
-        </article>
-        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1516223725307-6f76b9182f7a?auto=format&fit=crop&w=700&q=80" alt="Radio" />
-          <div class="p-5"><h3 class="font-black">Radios</h3><p class="mt-2 text-sm text-white/50">Recomendado</p></div>
-        </article>
-        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80" alt="Mochila" />
-          <div class="p-5"><h3 class="font-black">Mochilas</h3><p class="mt-2 text-sm text-white/50">Opcion premium</p></div>
-        </article>
-        <article class="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-          <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=700&q=80" alt="Botiquín" />
-          <div class="p-5"><h3 class="font-black">Botiquín</h3><p class="mt-2 text-sm text-white/50">Recomendado</p></div>
-        </article>
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <a href="pages/equipamiento/supervivencia-casa.html" class="store-entry" style="background-image:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1100&q=80')">
+          <div class="store-entry__content">
+            <p class="store-entry__tag">Hogar</p>
+            <h3 class="mt-4 text-3xl font-black">Supervivencia en casa</h3>
+            <p class="mt-3 leading-7 text-white/65">Apagones, agua potable, cocina sin electricidad, botiquin, seguridad y despensa.</p>
+            <span class="mt-5 w-fit rounded-xl bg-survival-500 px-4 py-3 text-sm font-black text-black shadow-glow">Entrar en tienda</span>
+          </div>
+        </a>
+
+        <a href="pages/equipamiento/supervivencia-urbana.html" class="store-entry" style="background-image:url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=80')">
+          <div class="store-entry__content">
+            <p class="store-entry__tag">Ciudad</p>
+            <h3 class="mt-4 text-3xl font-black">Supervivencia urbana</h3>
+            <p class="mt-3 leading-7 text-white/65">Mochila ligera, movilidad, energia, documentos, orientacion y seguridad discreta.</p>
+            <span class="mt-5 w-fit rounded-xl bg-survival-500 px-4 py-3 text-sm font-black text-black shadow-glow">Entrar en tienda</span>
+          </div>
+        </a>
+
+        <a href="pages/equipamiento/seguridad-privada.html" class="store-entry" style="background-image:url('https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=1100&q=80')">
+          <div class="store-entry__content">
+            <p class="store-entry__tag">Profesional</p>
+            <h3 class="mt-4 text-3xl font-black">Seguridad privada</h3>
+            <p class="mt-3 leading-7 text-white/65">Turnos, visibilidad, comunicaciones, primeros auxilios y organizacion de servicio.</p>
+            <span class="mt-5 w-fit rounded-xl bg-survival-500 px-4 py-3 text-sm font-black text-black shadow-glow">Entrar en tienda</span>
+          </div>
+        </a>
+
+        <a href="pages/equipamiento/soldado-espanol.html" class="store-entry" style="background-image:url('https://images.unsplash.com/photo-1579912437766-7896df6d3cd3?auto=format&fit=crop&w=1100&q=80')">
+          <div class="store-entry__content">
+            <p class="store-entry__tag">Campo</p>
+            <h3 class="mt-4 text-3xl font-black">Soldado español</h3>
+            <p class="mt-3 leading-7 text-white/65">Orden, mantenimiento, hidratacion, descanso, higiene y material personal no sensible.</p>
+            <span class="mt-5 w-fit rounded-xl bg-survival-500 px-4 py-3 text-sm font-black text-black shadow-glow">Entrar en tienda</span>
+          </div>
+        </a>
       </div>
     </section>
 
     <section id="newsletter" class="border-y border-white/10 bg-[url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center">
-      <div class="bg-black/65 px-5 py-16">
-        <div class="glass mx-auto max-w-4xl rounded-[2rem] p-6 md:p-8">
-          <div class="grid gap-6 md:grid-cols-[auto_1fr] md:items-center">
-            <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-survival-500 text-3xl text-black">✉️</div>
-            <div>
-              <h2 class="text-3xl font-black">Consejos semanales para estar preparado</h2>
-              <p class="mt-2 text-white/60">Demo publica sin backend: el formulario solo confirma la suscripcion en este navegador.</p>
-              <form id="newsletterForm" class="mt-5 flex flex-col gap-3 sm:flex-row">
-                <label class="sr-only" for="newsletterEmail">Correo electronico</label>
-                <input id="newsletterEmail" class="min-w-0 flex-1 rounded-xl border border-white/10 bg-white px-4 py-3 text-black outline-none" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="Tu correo electrónico" required />
-                <input class="pointer-events-none absolute -left-[9999px] h-px w-px opacity-0" type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" />
-                <button class="rounded-xl bg-survival-500 px-5 py-3 font-black text-black hover:bg-survival-300">Suscribirme gratis</button>
-              </form>
+      <div class="bg-black/72 px-5 py-16">
+        <div class="mx-auto grid max-w-6xl gap-6 rounded-[2rem] border border-white/10 bg-black/55 p-6 shadow-2xl backdrop-blur-xl md:grid-cols-[1fr_.85fr] md:p-8">
+          <div>
+            <p class="text-xs font-black uppercase tracking-[.24em] text-survival-400">Recursos</p>
+            <h2 class="mt-3 text-4xl font-black tracking-tight">Unete a la newsletter de VitaGuardia</h2>
+            <p class="mt-4 max-w-2xl leading-8 text-white/65">Recibe comparativas, listas de revision y avisos utiles para mantener tu kit al dia sin comprar de mas.</p>
+            <div class="mt-6 grid gap-3 text-sm text-white/70 sm:grid-cols-3">
+              <span class="rounded-xl border border-white/10 bg-white/5 p-3">Guias practicas</span>
+              <span class="rounded-xl border border-white/10 bg-white/5 p-3">Comparativas claras</span>
+              <span class="rounded-xl border border-white/10 bg-white/5 p-3">Alertas de revision</span>
             </div>
           </div>
+
+          <form id="newsletterForm" class="relative flex flex-col justify-center gap-3 rounded-[1.25rem] border border-white/10 bg-white/[.04] p-5">
+            <label class="text-sm font-black text-white" for="newsletterEmail">Correo electronico</label>
+            <input id="newsletterEmail" class="min-w-0 rounded-xl border border-white/10 bg-white px-4 py-4 text-black outline-none focus:border-survival-500" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="tu@email.com" required />
+            <input class="pointer-events-none absolute -left-[9999px] h-px w-px opacity-0" type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" />
+            <button class="rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow hover:bg-survival-300">Recibir el brief</button>
+            <p class="text-xs leading-5 text-white/45">Solo contenido accionable sobre preparacion, mantenimiento y compra con criterio.</p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-5 py-10 text-sm text-white/45 md:flex-row">
-    <p>© 2026 VitaGuardia. Preparacion domestica con criterio.</p>
-    <p><a class="hover:text-white" href="pages/legal/privacidad.html">Privacidad</a> · <a class="hover:text-white" href="pages/legal/afiliados.html">Afiliados</a> · <a class="hover:text-white" href="contacto.html">Contacto</a></p>
-  </footer>
-
   <script src="assets/js/home-generator.js"></script>
   <script src="assets/js/newsletter.js"></script>
+  <script src="assets/js/site-footer.js?v=6"></script>
 </body>
 </html>

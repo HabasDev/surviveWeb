@@ -30,6 +30,49 @@
       border: 1px solid rgba(255,255,255,.09);
       backdrop-filter: blur(18px);
     }
+    .vg-select-wrap {
+      position: relative;
+    }
+    .vg-select-wrap::after {
+      content: "";
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      width: .62rem;
+      height: .62rem;
+      border-right: 2px solid #86d83d;
+      border-bottom: 2px solid #86d83d;
+      pointer-events: none;
+      transform: translateY(-68%) rotate(45deg);
+    }
+    .vg-select {
+      width: 100%;
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: .9rem;
+      background:
+        linear-gradient(135deg, rgba(134,216,61,.12), transparent 42%),
+        rgba(5, 8, 5, .82);
+      color: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+      outline: none;
+      padding: .95rem 3rem .95rem 1rem;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .vg-select:hover {
+      border-color: rgba(134,216,61,.45);
+      background:
+        linear-gradient(135deg, rgba(134,216,61,.18), transparent 42%),
+        rgba(8, 13, 8, .9);
+    }
+    .vg-select:focus {
+      border-color: #86d83d;
+      box-shadow: 0 0 0 3px rgba(134,216,61,.16), inset 0 1px 0 rgba(255,255,255,.08);
+    }
+    .vg-select option {
+      background: #0b100b;
+      color: #fff;
+    }
   </style>
 </head>
 <body class="min-h-screen text-white antialiased">
@@ -65,37 +108,45 @@
         <form id="kitForm" class="grid gap-5 rounded-[1.5rem] border border-white/10 bg-black/30 p-5 md:grid-cols-2">
           <div>
             <label class="block text-sm font-bold text-white/80" for="people">Personas en casa</label>
-            <select id="people" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="1">1 persona</option>
-              <option value="2" selected>2 personas</option>
-              <option value="3">3 personas</option>
-              <option value="4">4 personas</option>
-              <option value="5">5 o mas</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="people" class="vg-select">
+                <option value="1">1 persona</option>
+                <option value="2" selected>2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 o mas</option>
+              </select>
+            </div>
           </div>
           <div>
             <label class="block text-sm font-bold text-white/80" for="pets">Mascotas</label>
-            <select id="pets" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="no" selected>No</option>
-              <option value="yes">Si</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="pets" class="vg-select">
+                <option value="no" selected>No</option>
+                <option value="yes">Si</option>
+              </select>
+            </div>
           </div>
           <div>
             <label class="block text-sm font-bold text-white/80" for="zone">Entorno</label>
-            <select id="zone" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="city">Ciudad</option>
-              <option value="town">Pueblo</option>
-              <option value="rural">Zona rural</option>
-              <option value="coast">Costa</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="zone" class="vg-select">
+                <option value="city">Ciudad</option>
+                <option value="town">Pueblo</option>
+                <option value="rural">Zona rural</option>
+                <option value="coast">Costa</option>
+              </select>
+            </div>
           </div>
           <div>
             <label class="block text-sm font-bold text-white/80" for="budget">Presupuesto</label>
-            <select id="budget" class="mt-2 w-full rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-white outline-none focus:border-survival-500">
-              <option value="basic">Basico: lo imprescindible</option>
-              <option value="medium" selected>Equilibrado: mejor relacion calidad-precio</option>
-              <option value="pro">Completo: preparacion avanzada</option>
-            </select>
+            <div class="vg-select-wrap mt-2">
+              <select id="budget" class="vg-select">
+                <option value="basic">Basico: lo imprescindible</option>
+                <option value="medium" selected>Equilibrado: mejor relacion calidad-precio</option>
+                <option value="pro">Completo: preparacion avanzada</option>
+              </select>
+            </div>
           </div>
           <button class="md:col-span-2 rounded-xl bg-survival-500 px-5 py-4 font-black text-black shadow-glow transition hover:bg-survival-300" type="submit">Generar recomendacion</button>
         </form>
@@ -128,5 +179,6 @@
   <script src="../assets/js/kit-cart.js"></script>
   <script src="../assets/js/products.js"></script>
   <script src="../assets/js/kit-generator.js"></script>
+  <script src="../assets/js/site-footer.js?v=6"></script>
 </body>
 </html>
