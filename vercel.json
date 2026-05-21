@@ -137,6 +137,11 @@
       "permanent": true
     },
     {
+      "source": "/guia/medicamentos-emergencia-casa.html",
+      "destination": "/guia/medicamentos-emergencia-casa",
+      "permanent": true
+    },
+    {
       "source": "/guia/comida-emergencia-barata.html",
       "destination": "/guia/comida-emergencia-barata",
       "permanent": true
@@ -210,6 +215,10 @@
     {
       "source": "/guia/radio-emergencia",
       "destination": "/guia/radio-emergencia.html"
+    },
+    {
+      "source": "/guia/medicamentos-emergencia-casa",
+      "destination": "/guia/medicamentos-emergencia-casa.html"
     },
     {
       "source": "/guia/comida-emergencia-barata",

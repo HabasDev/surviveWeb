@@ -106,6 +106,15 @@ const SOLDIER_SHOP_PRODUCTS = [
     `;
   }
 
+  function renderProductLink(product) {
+    const hasLink = product.enlace && !product.enlace.startsWith('ENLACE_');
+    if (!hasLink) {
+      return '';
+    }
+
+    return `<a class="rounded-xl border border-white/15 px-4 py-3 text-sm font-black text-white/75 hover:bg-white/10" href="${product.enlace}" target="_blank" rel="nofollow sponsored noopener">Ver producto</a>`;
+  }
+
   function renderFilters() {
     filters.innerHTML = SOLDIER_SHOP_CATEGORIES.map((category) => `
       <button class="${category.id === activeCategory ? 'border-survival-500 bg-survival-500 text-black' : 'border-white/10 bg-white/5 text-white/70 hover:border-survival-500/40 hover:bg-white/10 hover:text-white'} flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left text-sm font-black transition" type="button" data-category="${category.id}">
@@ -137,7 +146,7 @@ const SOLDIER_SHOP_PRODUCTS = [
           <p class="text-sm font-bold text-white/45">${product.tierLabel}</p>
           <div class="flex flex-wrap gap-2">
             ${renderKitButton(product)}
-            <a class="rounded-xl border border-white/15 px-4 py-3 text-sm font-black text-white/75 hover:bg-white/10" href="${product.enlace}" target="_blank" rel="nofollow sponsored noopener">Ver en Amazon</a>
+            ${renderProductLink(product)}
           </div>
         </div>
       </article>
